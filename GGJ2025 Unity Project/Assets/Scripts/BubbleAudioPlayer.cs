@@ -14,18 +14,17 @@ public class BubbleAudioPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-        bubble = gameObject.GetComponent<Bubble>();
+        bubble = GetComponent<Bubble>();
 
         // Subscribe to the beat event
-        AudioManager.Instance.OnGrid.AddListener(TriggerSoundOnBeat);
-
-        if (bubbleType == BubbleType.Rythm)
+         AudioManager.Instance.OnGrid.AddListener(TriggerSoundOnBeat);
+        if (bubble.typeInt == 0)
         AkSoundEngine.SetSwitch("Music_Group", "Rythm", gameObject);
 
-        else if (bubbleType == BubbleType.Amb)
+        else if (bubble.typeInt == 1)
         AkSoundEngine.SetSwitch("Music_Group", "Amb", gameObject);
 
-        else if (bubbleType == BubbleType.Arp)
+        else if (bubble.typeInt == 2)
         AkSoundEngine.SetSwitch("Music_Group", "Arp", gameObject);
 
         if (bubble.size == 1)
@@ -69,7 +68,7 @@ public class BubbleAudioPlayer : MonoBehaviour
         {
             // Post the Wwise event
             bubblePlayEvent.Post(gameObject);
-            Debug.Log("SOUND: " + bubbleType + "  Size " + bubble.size.ToString() + "  Level " + bubble.level.ToString());
+            Debug.Log("SOUND: " + bubble.Type + "  Size " + bubble.size.ToString() + "  Level " + bubble.level.ToString());
             // Reset the flag
             triggerEventOnNextBeat = false;
         }

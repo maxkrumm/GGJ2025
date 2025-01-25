@@ -35,6 +35,7 @@ public class Bubble : MonoBehaviour
     /// </summary>
     private float _stopTimer = 0.0f;
 
+    public int typeInt;
     public BubbleType Type { get; private set; }
 
     void Start()
@@ -66,6 +67,7 @@ public class Bubble : MonoBehaviour
         Type = type;
 
         _speed = _defaultSpeed;
+        typeInt = (int)Type;
 
         BubbleAudioPlayer bubbleAudioPlayer = gameObject.GetComponent<BubbleAudioPlayer>();
         bubbleAudioPlayer.QueueSound();
