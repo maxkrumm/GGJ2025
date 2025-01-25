@@ -2,7 +2,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public enum BubbleType { ドラム, ギター, ベース }
+public enum BubbleType { Dram, Guitar, Bass }
 
 public class Bubble : MonoBehaviour
 {
