@@ -63,6 +63,7 @@ public class Bubble : MonoBehaviour
         _spriteRenderer.color = setting.colors[level - 1];
         this.size = size;
         Dir = dir;
+        Type = type;
 
         _speed = _defaultSpeed;
 
