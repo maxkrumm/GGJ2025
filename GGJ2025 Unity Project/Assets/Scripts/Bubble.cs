@@ -2,7 +2,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public enum BubbleType { Dram, Guitar, Bass }
+public enum BubbleType { Rythm, Amb, Arp }
 
 public class Bubble : MonoBehaviour
 {
@@ -11,8 +11,12 @@ public class Bubble : MonoBehaviour
     [SerializeField] private float _defaultSpeed = 1.0f;
     [SerializeField] private float _overlapedSpeed = 0.5f;
 
-    [Header("ƒTƒCƒYŒW”")]
+    [Header("ï¿½Tï¿½Cï¿½Yï¿½Wï¿½ï¿½")]
     [SerializeField] private float _sizeMultiplay = 1.0f;
+
+
+    [Header("trueï¿½È‚ï¿½dï¿½È‚ï¿½ï¿½ï¿½ï¿½ê‡ï¿½ÉƒXï¿½sï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,falseï¿½Ìê‡ï¿½ï¿½èï¿½Ô~ï¿½Ü‚ï¿½")]
+    [SerializeField] private bool IsOverlapAction = false;
 
     private AudioClip _moveSE;
     private AudioClip _breakSE;
@@ -28,7 +32,7 @@ public class Bubble : MonoBehaviour
     public Vector2 Dir { get; set; }
 
     private int level = 1;
-    private int size;
+    [HideInInspector] public int size;
 
     /// <summary>
     /// 
@@ -36,21 +40,22 @@ public class Bubble : MonoBehaviour
     private float _stopTimer = 0.0f;
 
     public BubbleType Type { get; private set; }
+
     void Start()
     {
 
     }
 
     /// <summary>
-    /// ƒVƒƒƒ{ƒ“‚Ç‚¨‚µ‚ªd‚È‚Á‚Ä‚¢‚é‚©
+    /// ï¿½Vï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½È‚ï¿½ï¿½Ä‚ï¿½ï¿½é‚©
     /// </summary>
     public bool IsOverlap => _overlapBubble != null;
 
     /// <summary>
-    /// ‰Šú‰»ˆ—
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="type">ƒVƒƒƒ{ƒ“‹Êí•Ê</param>
-    /// <param name="size">ƒVƒƒƒ{ƒ“‹Ê‚ÌƒTƒCƒY3’iŠK</param>
+    /// <param name="type">ï¿½Vï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½Êï¿½ï¿½</param>
+    /// <param name="size">ï¿½Vï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½Ê‚ÌƒTï¿½Cï¿½Y3ï¿½iï¿½K</param>
     public void Initialize(BubbleType type, int size, Vector2 dir)
     {
         transform.localScale = new Vector2(size, size) * _sizeMultiplay;
@@ -80,7 +85,7 @@ public class Bubble : MonoBehaviour
     }
 
     /// <summary>
-    /// Focus‚³‚ê‚Ä‚¢‚é
+    /// Focusï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½
     /// </summary>
     public void OnFocus(ref bool isFocus)
     {
@@ -88,17 +93,17 @@ public class Bubble : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒoƒuƒ‹”j‰óƒƒ\ƒbƒh
+    /// ï¿½oï¿½uï¿½ï¿½ï¿½jï¿½óƒƒ\ï¿½bï¿½h
     /// </summary>
     public void BreakBubble()
     {
         //_audioSource.PlayOneShot(_blendSE);
-        // Note:‚±‚ê‚¾‚Æ”j‰ó‚Æ“¯‚ÉSE‚ª~‚Ü‚é‚½‚ß—vC³
+        // Note:ï¿½ï¿½ï¿½ê‚¾ï¿½Æ”jï¿½ï¿½Æ“ï¿½ï¿½ï¿½ï¿½ï¿½SEï¿½ï¿½ï¿½~ï¿½Ü‚é‚½ï¿½ß—vï¿½Cï¿½ï¿½
         Destroy(gameObject);
     }
     [SerializeField] private Bubble prefab;
     /// <summary>
-    /// ƒVƒƒƒ{ƒ“‚Ç‚¤‚µ‚ğ‡¬
+    /// ï¿½Vï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public Bubble BlendBubbles()
     {
@@ -120,14 +125,17 @@ public class Bubble : MonoBehaviour
     {
         if (!collision.gameObject.TryGetComponent<Bubble>(out var bubble)) return;
 
-        if (_overlapBubble != null) return; // Šù‚É•Ê‚Ì‚Æd‚È‚Á‚Ä‚¢‚éê‡A‡¬‚Í•s—v‚Ì‚½‚ß
+        if (_overlapBubble != null) return; // ï¿½ï¿½ï¿½É•Ê‚Ì‚Ædï¿½È‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ê‡ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Í•sï¿½vï¿½Ì‚ï¿½ï¿½ï¿½
 
         if (bubble.Type != Type || bubble.level != level||bubble.size!=size) return;
 
         _overlapBubble = bubble;
 
-        // d•¡‚ÍƒNƒŠƒbƒN‚µ‚â‚·‚¢‚æ‚¤‹““®‚ğ‚ä‚Á‚­‚è‚É
-        _speed = _overlapedSpeed;
+        // ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ÍƒNï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½â‚·ï¿½ï¿½ï¿½æ‚¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (IsOverlapAction)
+            _speed = _overlapedSpeed;
+        else
+            _stopTimer = 2f;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
