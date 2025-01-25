@@ -49,10 +49,10 @@ public class Bubble : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+  /* private void FixedUpdate()
     {
         _rigidbody.linearVelocity = Dir * 5.0f;
-    }
+    }*/
 
     /// <summary>
     /// Focus‚³‚ê‚Ä‚¢‚é

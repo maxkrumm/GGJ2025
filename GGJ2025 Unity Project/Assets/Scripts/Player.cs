@@ -4,46 +4,69 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Bubble _bubulePrefab;
+    public GameObject meter;
     public int num;
    public int push_count;
    public float timeleft;
-    public int bubblesize;
+    public int bubblesize=0;
     const int Max=99;
     const int Min = 0;
- 
-    
+    bool changeRotate;
+    float rotate;
+    float angle;
+    Vector2 dir;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+
+    void Meter()
     {
-        
+        if(0.1f>=meter.transform.eulerAngles.x)
+        {
+            changeRotate = true;
+        }
+        if(90<=meter.transform.eulerAngles.x)
+        {
+            changeRotate = false;
+        }
+
+        if(changeRotate)
+        {
+            rotate = 1;
+        }
+        else
+        {
+            rotate = -1;
+        }
+
+        meter.transform.Rotate(rotate,0,0);
+        angle = meter.transform.eulerAngles.x;
+        dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+
     }
 
+ 
     // Update is called once per frame
     void Update()
     {
-        var bubble=Instantiate(_bubulePrefab);
+        Meter();
     
         if (Input.mouseScrollDelta.y > 0)
         {
-            if (num < Min)
-            {
-                num++;
-            }
+            num--;
+          
         }
-        else if (Input.mouseScrollDelta.y<0) {
-            if (num > Max)
-            {
-                num--;
-            }
+        else if (Input.mouseScrollDelta.y<0)
+        {
+            num++;
+           
         }
         BubbleType bubbleTypes= BubbleType.ドラム;
         if (num > 0)
         {
              bubbleTypes = BubbleType.ドラム;
-            string Type = bubbleTypes.ToString();
+           
         }
-        if (num > 33 || num < 66)
+        if (num > 33)
         {
              bubbleTypes = BubbleType.ギター;
         }
@@ -51,15 +74,15 @@ public class Player : MonoBehaviour
         {
              bubbleTypes = BubbleType.ベース;
         }
-        if (push_count < 1)
+        if (push_count > 1)
         {
             bubblesize = 1;
         }
-        if (push_count <= 3)
+        if (push_count >= 3)
         {
             bubblesize = 2;
         }
-        if (push_count <= 5)
+        if (push_count >= 5)
         {
             bubblesize = 3;
         }
@@ -71,16 +94,27 @@ public class Player : MonoBehaviour
             {
                 timeleft = 0.75f;
                 push_count++;
+                var bubble = Instantiate(_bubulePrefab);
+                bubble.Initialize(bubbleTypes, bubblesize, dir);
             }
-            bubble.Initialize(bubbleTypes, bubblesize);
 
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
             push_count = 0;
+            bubblesize = 0;
         }
         Debug.Log(push_count);
         Debug.Log(num);
+        Debug.Log(bubbleTypes);
+        if (num <= Min)
+        {
+            num = Min;
+        }
+         if (num > Max)
+            {
+                num=Max;
+            }
     }
     
     
