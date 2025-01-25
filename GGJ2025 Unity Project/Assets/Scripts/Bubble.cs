@@ -14,10 +14,6 @@ public class Bubble : MonoBehaviour
     [Header("サイズ係数")]
     [SerializeField] private float _sizeMultiplay = 1.0f;
 
-
-    [Header("trueなら重なった場合にスピードが減速する,falseの場合一定時間止まる")]
-    [SerializeField] private bool IsOverlapAction = false;
-
     private AudioClip _moveSE;
     private AudioClip _breakSE;
     private AudioClip _blendSE;
@@ -74,15 +70,7 @@ public class Bubble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_stopTimer > 0.0f)
-        {
-            _stopTimer -= Time.deltaTime;
-            _speed = 0;
-        }
-        else
-        {
-            _speed = _defaultSpeed;
-        }
+        
 
     }
 
@@ -139,10 +127,7 @@ public class Bubble : MonoBehaviour
         _overlapBubble = bubble;
 
         // 重複時はクリックしやすいよう挙動をゆっくりに
-        if (IsOverlapAction)
-            _speed = _overlapedSpeed;
-        else
-            _stopTimer = 2f;
+        _speed = _overlapedSpeed;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -152,10 +137,7 @@ public class Bubble : MonoBehaviour
         if (_overlapBubble != bubble) return;
         _overlapBubble = null;
 
-        if (IsOverlapAction)
-            _speed = _defaultSpeed;
-        else
-            _stopTimer = 0f;
+        _speed = _defaultSpeed;
 
     }
 
