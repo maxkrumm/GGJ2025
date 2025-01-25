@@ -12,10 +12,10 @@ public class OsakiDebugManager : MonoBehaviour
     void Start()
     {
         bubble1 = Instantiate(_bubblePrefab);
-        bubble1.Initialize(BubbleType.Dram, size, dir);
+        bubble1.Initialize(BubbleType.Rythm, size, dir);
 
         bubble2 = Instantiate(_bubblePrefab);
-        bubble2.Initialize(BubbleType.Dram, size, dir);
+        bubble2.Initialize(BubbleType.Rythm, size, dir);
     }
 
     // Update is called once per frame

@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" SchemaVersion="123">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Music_Sync" ID="{71031F63-FB94-4355-AA06-2BD00DFBCD3E}">
+					<ChildrenList>
+						<Action Name="" ID="{3356A612-142B-4703-850A-411197478283}" ShortID="376029280">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Sync" ID="{06285F70-1B23-407A-A86B-B4B740D84606}" WorkUnitID="{36EC59EB-371A-4F47-A2AE-8F75C2DFF83F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Hihats" ID="{5DACAFC1-ADCF-4AD4-A98C-6A1812D410EE}">
+					<ChildrenList>
+						<Action Name="" ID="{063CC02E-DCCE-4DAD-96DD-BB61B9EA4192}" ShortID="958470035">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1D0DE596-61FD-4047-BD1D-D27E9CAE8FC3}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="0.05"/>
+													<Property Name="Min" Type="Real64" Value="-0.05"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hihats L1" ID="{7A0F7CA3-2602-4C80-8F83-2C6FF6AA1246}" WorkUnitID="{36EC59EB-371A-4F47-A2AE-8F75C2DFF83F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Hihats" ID="{AC400F6D-09D8-4356-BBDD-FF243D505FF3}">
+					<ChildrenList>
+						<Action Name="" ID="{FA992CB1-AE5F-461C-A77B-6A3EAA7B68B8}" ShortID="824184105">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hihats L1" ID="{7A0F7CA3-2602-4C80-8F83-2C6FF6AA1246}" WorkUnitID="{36EC59EB-371A-4F47-A2AE-8F75C2DFF83F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -66,11 +66,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 8bbaac268e7d0848bec1c6295eb9ce24
     GuidInternal: 
-    m_lastTime: -8584638734223892145
+    m_lastTime: -8584637927558142697
     List:
-    - name: SFX
+    - name: Music
       guid: e82d704d92289f4cadd349d83cfbbdb0
-      id: 393239870
+      id: 3991942870
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -78,10 +78,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 8bbaac268e7d0848bec1c6295eb9ce24
-      - ElementName: SFX
+      - ElementName: Music
         ObjectType: 7
         guid: e82d704d92289f4cadd349d83cfbbdb0
-      Path: SoundBanks\Default Work Unit\SFX
+      Path: SoundBanks\Default Work Unit\Music
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,8 +94,59 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 850c9bacbf653644b69dccbdead05d62
     GuidInternal: 
-    m_lastTime: -8584638743842233447
-    List: []
+    m_lastTime: -8584637908864333512
+    List:
+    - name: Play_Hihats
+      guid: c1afac5dcfadd44aa98c6a1812d410ee
+      id: 3125257621
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Hihats
+        ObjectType: 3
+        guid: c1afac5dcfadd44aa98c6a1812d410ee
+      Path: Events\Default Work Unit\Play_Hihats
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Music_Sync
+      guid: 631f037194fb5543aa062bd00dfbcd3e
+      id: 670227703
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Music_Sync
+        ObjectType: 3
+        guid: 631f037194fb5543aa062bd00dfbcd3e
+      Path: Events\Default Work Unit\Play_Music_Sync
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Hihats
+      guid: 6d0f40acd8095643bbddff243d505ff3
+      id: 4044120103
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Stop_Hihats
+        ObjectType: 3
+        guid: 6d0f40acd8095643bbddff243d505ff3
+      Path: Events\Default Work Unit\Stop_Hihats
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -136,8 +187,206 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b84b71e90c2599449c0092ccb67fb3fa
     GuidInternal: 
-    m_lastTime: -8584638743842113504
-    List: []
+    m_lastTime: -8584637908993003670
+    List:
+    - name: Music_Group
+      guid: 560d16494c4d8f42bb415b94b76b2e37
+      id: 1221856762
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b84b71e90c2599449c0092ccb67fb3fa
+      - ElementName: Music_Group
+        ObjectType: 11
+        guid: 560d16494c4d8f42bb415b94b76b2e37
+      Path: Switches\Default Work Unit\Music_Group
+      values:
+      - name: Amb
+        guid: c9ad42f0101cab48843609efcb61139c
+        id: 1117531639
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Group
+          ObjectType: 11
+          guid: 560d16494c4d8f42bb415b94b76b2e37
+        - ElementName: Amb
+          ObjectType: 10
+          guid: c9ad42f0101cab48843609efcb61139c
+      - name: Arp
+        guid: 33e988432c326c4683ca2cec6217c91c
+        id: 865867144
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Group
+          ObjectType: 11
+          guid: 560d16494c4d8f42bb415b94b76b2e37
+        - ElementName: Arp
+          ObjectType: 10
+          guid: 33e988432c326c4683ca2cec6217c91c
+      - name: Rythm
+        guid: 2c9e2df8373ecc419d915fb4e42011d7
+        id: 812855099
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Group
+          ObjectType: 11
+          guid: 560d16494c4d8f42bb415b94b76b2e37
+        - ElementName: Rythm
+          ObjectType: 10
+          guid: 2c9e2df8373ecc419d915fb4e42011d7
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Music_Level
+      guid: a1d0a26d6b052a44bed9fce00e6df46d
+      id: 2177735725
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b84b71e90c2599449c0092ccb67fb3fa
+      - ElementName: Music_Level
+        ObjectType: 11
+        guid: a1d0a26d6b052a44bed9fce00e6df46d
+      Path: Switches\Default Work Unit\Music_Level
+      values:
+      - name: L1
+        guid: aeda33be9b6c7644816a0d0cc8fd3479
+        id: 1702304824
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Level
+          ObjectType: 11
+          guid: a1d0a26d6b052a44bed9fce00e6df46d
+        - ElementName: L1
+          ObjectType: 10
+          guid: aeda33be9b6c7644816a0d0cc8fd3479
+      - name: L2
+        guid: 35c7588b703bdb4cadea54c286d45a24
+        id: 1702304827
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Level
+          ObjectType: 11
+          guid: a1d0a26d6b052a44bed9fce00e6df46d
+        - ElementName: L2
+          ObjectType: 10
+          guid: 35c7588b703bdb4cadea54c286d45a24
+      - name: L3
+        guid: 45f9463935ae9044b841f63b101f6803
+        id: 1702304826
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Level
+          ObjectType: 11
+          guid: a1d0a26d6b052a44bed9fce00e6df46d
+        - ElementName: L3
+          ObjectType: 10
+          guid: 45f9463935ae9044b841f63b101f6803
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Music_Size
+      guid: 5eb3032dc3162345acd3849c545c8cb0
+      id: 3044745898
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b84b71e90c2599449c0092ccb67fb3fa
+      - ElementName: Music_Size
+        ObjectType: 11
+        guid: 5eb3032dc3162345acd3849c545c8cb0
+      Path: Switches\Default Work Unit\Music_Size
+      values:
+      - name: Big
+        guid: 2c3faf22bcc46840ad1e81d8aeceeb41
+        id: 647611021
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Size
+          ObjectType: 11
+          guid: 5eb3032dc3162345acd3849c545c8cb0
+        - ElementName: Big
+          ObjectType: 10
+          guid: 2c3faf22bcc46840ad1e81d8aeceeb41
+      - name: Mid
+        guid: b0f307e6ece56145b5c7ba5e7260222a
+        id: 1182670505
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Size
+          ObjectType: 11
+          guid: 5eb3032dc3162345acd3849c545c8cb0
+        - ElementName: Mid
+          ObjectType: 10
+          guid: b0f307e6ece56145b5c7ba5e7260222a
+      - name: Small
+        guid: f2064b77dc24f840932ff0283c869dd7
+        id: 1846755610
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b84b71e90c2599449c0092ccb67fb3fa
+        - ElementName: Music_Size
+          ObjectType: 11
+          guid: 5eb3032dc3162345acd3849c545c8cb0
+        - ElementName: Small
+          ObjectType: 10
+          guid: f2064b77dc24f840932ff0283c869dd7
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -153,7 +402,7 @@ MonoBehaviour:
     m_lastTime: -8584638743841098298
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000a0000000b0000003700000038000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

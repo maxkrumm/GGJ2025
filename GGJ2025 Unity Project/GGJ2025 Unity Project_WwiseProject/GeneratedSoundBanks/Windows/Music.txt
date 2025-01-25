@@ -1,0 +1,26 @@
+Event	ID	Name			Wwise Object Path	Notes
+	670227703	Play_Music_Sync			\Default Work Unit\Play_Music_Sync	
+	3125257621	Play_Hihats			\Default Work Unit\Play_Hihats	
+	4044120103	Stop_Hihats			\Default Work Unit\Stop_Hihats	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1221856762	Music_Group			\Default Work Unit\Music_Group	
+	2177735725	Music_Level			\Default Work Unit\Music_Level	
+	3044745898	Music_Size			\Default Work Unit\Music_Size	
+
+Switch	ID	Name	Switch Group			Notes
+	812855099	Rythm	Music_Group			
+	865867144	Arp	Music_Group			
+	1117531639	Amb	Music_Group			
+	1702304824	L1	Music_Level			
+	1702304826	L3	Music_Level			
+	1702304827	L2	Music_Level			
+	647611021	Big	Music_Size			
+	1182670505	Mid	Music_Size			
+	1846755610	Small	Music_Size			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	50950088	mus_rythm_hihats_L1_03	C:\Users\maxkr\Documents\GitHub\GGJ2025\GGJ2025 Unity Project\GGJ2025 Unity Project_WwiseProject\.cache\5D\{5DB4088A-0F8A-B103-8ABD-842FED3D71B3}.wem		\Interactive Music Hierarchy\Default Work Unit\Music Group Switch\Rythm Size Switch\Hihats Level Switch\Hihats L1\mus_rythm_hihats_L1_03\mus_rythm_hihats_L1_03		246956
+	193205753	mus_rythm_hihats_L1_01	C:\Users\maxkr\Documents\GitHub\GGJ2025\GGJ2025 Unity Project\GGJ2025 Unity Project_WwiseProject\.cache\96\{9688338E-06E4-9ACA-CEBA-81104B025D7D}.wem		\Interactive Music Hierarchy\Default Work Unit\Music Group Switch\Rythm Size Switch\Hihats Level Switch\Hihats L1\mus_rythm_hihats_L1_01\mus_rythm_hihats_L1_01		246952
+	826594434	mus_rythm_hihats_L1_02	C:\Users\maxkr\Documents\GitHub\GGJ2025\GGJ2025 Unity Project\GGJ2025 Unity Project_WwiseProject\.cache\D8\{D8AFA596-E75F-03BF-24D9-13892A77DDF8}.wem		\Interactive Music Hierarchy\Default Work Unit\Music Group Switch\Rythm Size Switch\Hihats Level Switch\Hihats L1\mus_rythm_hihats_L1_02\mus_rythm_hihats_L1_02		246956
+

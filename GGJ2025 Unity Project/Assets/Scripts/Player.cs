@@ -61,20 +61,26 @@ public class Player : MonoBehaviour
             num++;
            
         }
-        BubbleType bubbleTypes= BubbleType.Dram;
+
+        BubbleType bubbleTypes= BubbleType.Rythm;
+
         if (num > 0)
         {
-             bubbleTypes = BubbleType.Dram;
-           
+             bubbleTypes = BubbleType.Rythm;
         }
         if (num > 33)
         {
-             bubbleTypes = BubbleType.Guitar;
+             bubbleTypes = BubbleType.Amb;
         }
         if (num > 66)
         {
-             bubbleTypes = BubbleType.Bass;
+             bubbleTypes = BubbleType.Arp;
         }
+        if(push_count < 3)
+        {
+            bubblesize = 1;
+        }
+        
         if (push_count >= 3)
         {
             bubblesize = 2;

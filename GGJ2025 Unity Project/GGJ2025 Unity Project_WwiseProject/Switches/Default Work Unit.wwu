@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E9714BB8-250C-4499-9C00-92CCB67FB3FA}" SchemaVersion="123">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{E9714BB8-250C-4499-9C00-92CCB67FB3FA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E9714BB8-250C-4499-9C00-92CCB67FB3FA}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Music_Group" ID="{49160D56-4D4C-428F-BB41-5B94B76B2E37}">
+					<ChildrenList>
+						<Switch Name="Rythm" ID="{F82D9E2C-3E37-41CC-9D91-5FB4E42011D7}"/>
+						<Switch Name="Amb" ID="{F042ADC9-1C10-48AB-8436-09EFCB61139C}"/>
+						<Switch Name="Arp" ID="{4388E933-322C-466C-83CA-2CEC6217C91C}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Music_Size" ID="{2D03B35E-16C3-4523-ACD3-849C545C8CB0}">
+					<ChildrenList>
+						<Switch Name="Small" ID="{774B06F2-24DC-40F8-932F-F0283C869DD7}"/>
+						<Switch Name="Mid" ID="{E607F3B0-E5EC-4561-B5C7-BA5E7260222A}"/>
+						<Switch Name="Big" ID="{22AF3F2C-C4BC-4068-AD1E-81D8AECEEB41}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Music_Level" ID="{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}">
+					<ChildrenList>
+						<Switch Name="L1" ID="{BE33DAAE-6C9B-4476-816A-0D0CC8FD3479}"/>
+						<Switch Name="L2" ID="{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"/>
+						<Switch Name="L3" ID="{3946F945-AE35-4490-B841-F63B101F6803}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

@@ -41,9 +41,89 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1221856762",
+      "Name": "Music_Group",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Music_Group",
+      "GUID": "{49160D56-4D4C-428F-BB41-5B94B76B2E37}",
+      "Switches": [
+       {
+        "Id": "812855099",
+        "Name": "Rythm",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Group\\Rythm",
+        "GUID": "{F82D9E2C-3E37-41CC-9D91-5FB4E42011D7}"
+       },
+       {
+        "Id": "865867144",
+        "Name": "Arp",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Group\\Arp",
+        "GUID": "{4388E933-322C-466C-83CA-2CEC6217C91C}"
+       },
+       {
+        "Id": "1117531639",
+        "Name": "Amb",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Group\\Amb",
+        "GUID": "{F042ADC9-1C10-48AB-8436-09EFCB61139C}"
+       }
+      ]
+     },
+     {
+      "Id": "2177735725",
+      "Name": "Music_Level",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Music_Level",
+      "GUID": "{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}",
+      "Switches": [
+       {
+        "Id": "1702304824",
+        "Name": "L1",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Level\\L1",
+        "GUID": "{BE33DAAE-6C9B-4476-816A-0D0CC8FD3479}"
+       },
+       {
+        "Id": "1702304826",
+        "Name": "L3",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Level\\L3",
+        "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+       },
+       {
+        "Id": "1702304827",
+        "Name": "L2",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Level\\L2",
+        "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+       }
+      ]
+     },
+     {
+      "Id": "3044745898",
+      "Name": "Music_Size",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Music_Size",
+      "GUID": "{2D03B35E-16C3-4523-ACD3-849C545C8CB0}",
+      "Switches": [
+       {
+        "Id": "647611021",
+        "Name": "Big",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Size\\Big",
+        "GUID": "{22AF3F2C-C4BC-4068-AD1E-81D8AECEEB41}"
+       },
+       {
+        "Id": "1182670505",
+        "Name": "Mid",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Size\\Mid",
+        "GUID": "{E607F3B0-E5EC-4561-B5C7-BA5E7260222A}"
+       },
+       {
+        "Id": "1846755610",
+        "Name": "Small",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Size\\Small",
+        "GUID": "{774B06F2-24DC-40F8-932F-F0283C869DD7}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{E08A9BBA-2B37-D6D6-26E3-1E388DE3EAB0}"
+  "FileHash": "{EDE38A70-15C9-CD4E-FD48-6157BDC19EDB}"
  }
 }

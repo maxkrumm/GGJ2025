@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3991942870",
+    "Type": "User",
+    "GUID": "{4D702DE8-2892-4C9F-ADD3-49D83CFBBDB0}",
+    "Language": "SFX",
+    "Hash": "{390D3F44-9C92-6331-3BFA-7B271CE7D69B}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
+    "ShortName": "Music",
+    "Path": "Music.bnk",
+    "Media": [
+     {
+      "Id": "50950088",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_hihats_L1_03.wav",
+      "CachePath": "5D/{5DB4088A-0F8A-B103-8ABD-842FED3D71B3}.wem"
+     },
+     {
+      "Id": "193205753",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_hihats_L1_01.wav",
+      "CachePath": "96/{9688338E-06E4-9ACA-CEBA-81104B025D7D}.wem"
+     },
+     {
+      "Id": "826594434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_hihats_L1_02.wav",
+      "CachePath": "D8/{D8AFA596-E75F-03BF-24D9-13892A77DDF8}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3125257621",
+      "Name": "Play_Hihats",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Hihats",
+      "GUID": "{5DACAFC1-ADCF-4AD4-A98C-6A1812D410EE}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "50950088"
+       },
+       {
+        "Id": "193205753"
+       },
+       {
+        "Id": "826594434"
+       }
+      ]
+     },
+     {
+      "Id": "670227703",
+      "Name": "Play_Music_Sync",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music_Sync",
+      "GUID": "{71031F63-FB94-4355-AA06-2BD00DFBCD3E}",
+      "DurationType": "Infinite"
+     },
+     {
+      "Id": "4044120103",
+      "Name": "Stop_Hihats",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Hihats",
+      "GUID": "{AC400F6D-09D8-4356-BBDD-FF243D505FF3}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{034F0282-0466-7A6A-ECEA-058203F56508}"
+ }
+}
