@@ -12,7 +12,7 @@
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise2024.1.1.8691</WwiseInstallationPathWindows>
-  <WwiseProjectPath>D:/OneDrive/Studio/Projects/GGJ2025/GGJ2025 Unity Project_WwiseProject/GGJ2025 Unity Project_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../GGJ2025 Unity Project_WwiseProject/GGJ2025 Unity Project_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
