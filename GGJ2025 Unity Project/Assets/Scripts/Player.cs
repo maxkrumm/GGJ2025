@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         //meter.transform.Rotate(0,0,rotate);
         angle = (angle + 1) % 90;
         dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-        Debug.Log(dir);
+        //Debug.Log(dir);
     }
 
  

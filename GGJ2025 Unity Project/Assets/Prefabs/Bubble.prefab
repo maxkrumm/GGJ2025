@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1054274033460388260}
   - component: {fileID: 980132110511954925}
   - component: {fileID: -2984697493844781445}
+  - component: {fileID: 1101187858459836756}
   m_Layer: 6
   m_Name: Bubble
   m_TagString: Bubble
@@ -175,7 +176,28 @@ MonoBehaviour:
   _sizeMultiplay: 1.5
   IsOverlapAction: 1
   _overlapBubble: {fileID: 0}
+  size: 0
   prefab: {fileID: -2984697493844781445}
+--- !u!114 &1101187858459836756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709029815026359123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64e6135c959f80468e723a20cb5f90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePlayEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1a0a354d0bc1e5e4eb986d99c9ae0d45, type: 2}
+  bubbleStopEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bdf6361ac1444c340875152f14433465, type: 2}
 --- !u!1 &3083061007557946493
 GameObject:
   m_ObjectHideFlags: 0

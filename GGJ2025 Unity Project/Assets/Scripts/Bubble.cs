@@ -18,10 +18,6 @@ public class Bubble : MonoBehaviour
     [Header("true�Ȃ�d�Ȃ����ꍇ�ɃX�s�[�h����������,false�̏ꍇ��莞�Ԏ~�܂�")]
     [SerializeField] private bool IsOverlapAction = false;
 
-    private AudioClip _moveSE;
-    private AudioClip _breakSE;
-    private AudioClip _blendSE;
-    private AudioSource _audioSource;
     private SpriteRenderer _spriteRenderer;
 
     private float _speed = 1.0f;
@@ -31,7 +27,7 @@ public class Bubble : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public Vector2 Dir { get; set; }
 
-    private int level = 1;
+    [HideInInspector] public int level = 1;
     [HideInInspector] public int size;
 
     /// <summary>
@@ -58,8 +54,8 @@ public class Bubble : MonoBehaviour
     /// <param name="size">�V���{���ʂ̃T�C�Y3�i�K</param>
     public void Initialize(BubbleType type, int size, Vector2 dir)
     {
+        Debug.Log("BUBBLE: " + Type + "  Size " + size.ToString() + "  Level " + level.ToString());
         transform.localScale = new Vector2(size, size) * _sizeMultiplay;
-        _audioSource = this.AddComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -69,6 +65,9 @@ public class Bubble : MonoBehaviour
         Dir = dir;
 
         _speed = _defaultSpeed;
+
+        BubbleAudioPlayer bubbleAudioPlayer = gameObject.GetComponent<BubbleAudioPlayer>();
+        bubbleAudioPlayer.QueueSound();
     }
 
 
@@ -97,8 +96,7 @@ public class Bubble : MonoBehaviour
     /// </summary>
     public void BreakBubble()
     {
-        //_audioSource.PlayOneShot(_blendSE);
-        // Note:���ꂾ�Ɣj��Ɠ�����SE���~�܂邽�ߗv�C��
+
         Destroy(gameObject);
     }
     [SerializeField] private Bubble prefab;

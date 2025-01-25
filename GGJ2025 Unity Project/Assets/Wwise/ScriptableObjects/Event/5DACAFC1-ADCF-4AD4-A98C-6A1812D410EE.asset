@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2614033aa925784e99b2bcc6ae6406d, type: 3}
   m_Name: 5DACAFC1-ADCF-4AD4-A98C-6A1812D410EE
   m_EditorClassIdentifier: 
-  objectName: Play_Hihats
-  id: 3125257621
+  objectName: Play_Bubble
+  id: 39031584
   guid: 5DACAFC1-ADCF-4AD4-A98C-6A1812D410EE
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

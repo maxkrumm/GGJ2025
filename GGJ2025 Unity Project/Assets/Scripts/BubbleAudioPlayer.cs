@@ -37,6 +37,15 @@ public class BubbleAudioPlayer : MonoBehaviour
         else if (bubble.size == 3)
         AkSoundEngine.SetSwitch("Music_Size", "Big", gameObject);
 
+        if (bubble.level == 1)
+        AkSoundEngine.SetSwitch("Music_Level", "L1", gameObject);
+
+        else if (bubble.level == 2)
+        AkSoundEngine.SetSwitch("Music_Level", "L2", gameObject);
+
+        else if (bubble.level == 3)
+        AkSoundEngine.SetSwitch("Music_Level", "L3", gameObject);
+
     }
 
     private void OnDisable()
@@ -55,12 +64,12 @@ public class BubbleAudioPlayer : MonoBehaviour
 
     private void TriggerSoundOnBeat()
     {
-        Debug.Log("QueueSound called, triggerEventOnNextBeat: " + triggerEventOnNextBeat);
+        //Debug.Log("QueueSound called, triggerEventOnNextBeat: " + triggerEventOnNextBeat);
         if (triggerEventOnNextBeat)
         {
             // Post the Wwise event
             bubblePlayEvent.Post(gameObject);
-            Debug.Log("SOUND!");
+            Debug.Log("SOUND: " + bubbleType + "  Size " + bubble.size.ToString() + "  Level " + bubble.level.ToString());
             // Reset the flag
             triggerEventOnNextBeat = false;
         }

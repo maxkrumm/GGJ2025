@@ -6,8 +6,8 @@
 				<SoundBank Name="Music" ID="{4D702DE8-2892-4C9F-ADD3-49D83CFBBDB0}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Music_Sync" ID="{71031F63-FB94-4355-AA06-2BD00DFBCD3E}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_Hihats" ID="{AC400F6D-09D8-4356-BBDD-FF243D505FF3}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Hihats" ID="{5DACAFC1-ADCF-4AD4-A98C-6A1812D410EE}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Bubble" ID="{AC400F6D-09D8-4356-BBDD-FF243D505FF3}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Bubble" ID="{5DACAFC1-ADCF-4AD4-A98C-6A1812D410EE}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

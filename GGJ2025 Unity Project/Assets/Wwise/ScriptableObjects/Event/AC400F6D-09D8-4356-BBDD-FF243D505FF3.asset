@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2614033aa925784e99b2bcc6ae6406d, type: 3}
   m_Name: AC400F6D-09D8-4356-BBDD-FF243D505FF3
   m_EditorClassIdentifier: 
-  objectName: Stop_Hihats
-  id: 4044120103
+  objectName: Stop_Bubble
+  id: 1331642754
   guid: AC400F6D-09D8-4356-BBDD-FF243D505FF3
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

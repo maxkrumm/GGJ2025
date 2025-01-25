@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 8bbaac268e7d0848bec1c6295eb9ce24
     GuidInternal: 
-    m_lastTime: -8584637927558142697
+    m_lastTime: -8584637822429529698
     List:
     - name: Music
       guid: e82d704d92289f4cadd349d83cfbbdb0
@@ -94,11 +94,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 850c9bacbf653644b69dccbdead05d62
     GuidInternal: 
-    m_lastTime: -8584637908864333512
+    m_lastTime: -8584637822429661183
     List:
-    - name: Play_Hihats
+    - name: Play_Bubble
       guid: c1afac5dcfadd44aa98c6a1812d410ee
-      id: 3125257621
+      id: 39031584
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,10 +106,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 850c9bacbf653644b69dccbdead05d62
-      - ElementName: Play_Hihats
+      - ElementName: Play_Bubble
         ObjectType: 3
         guid: c1afac5dcfadd44aa98c6a1812d410ee
-      Path: Events\Default Work Unit\Play_Hihats
+      Path: Events\Default Work Unit\Play_Bubble
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -130,9 +130,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_Hihats
+    - name: Stop_Bubble
       guid: 6d0f40acd8095643bbddff243d505ff3
-      id: 4044120103
+      id: 1331642754
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -140,10 +140,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 850c9bacbf653644b69dccbdead05d62
-      - ElementName: Stop_Hihats
+      - ElementName: Stop_Bubble
         ObjectType: 3
         guid: 6d0f40acd8095643bbddff243d505ff3
-      Path: Events\Default Work Unit\Stop_Hihats
+      Path: Events\Default Work Unit\Stop_Bubble
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b84b71e90c2599449c0092ccb67fb3fa
     GuidInternal: 
-    m_lastTime: -8584637908993003670
+    m_lastTime: -8584637828145248486
     List:
     - name: Music_Group
       guid: 560d16494c4d8f42bb415b94b76b2e37
@@ -402,7 +402,7 @@ MonoBehaviour:
     m_lastTime: -8584638743841098298
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000a0000000b0000003700000038000000
+  ExpandedWaapiItemIds: 05000000060000000a0000000b0000000c0000003700000038000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
