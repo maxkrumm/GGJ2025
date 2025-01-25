@@ -812,6 +812,8 @@ MonoBehaviour:
   _bubblePrefab: {fileID: -2984697493844781445, guid: f0fee52a2e4fbd348836a722b3efed93, type: 3}
   size: 1
   dir: {x: 1, y: 1}
+  bubble1: {fileID: 0}
+  bubble2: {fileID: 0}
 --- !u!4 &1399838548
 Transform:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,28 +6,33 @@ public enum BubbleType { ドラム, ギター, ベース }
 
 public class Bubble : MonoBehaviour
 {
+    [SerializeField] private Bubble prefab;
+    [SerializeField] private BubbleSetting[] _settings;
+
     private AudioClip _moveSE;
     private AudioClip _breakSE;
     private AudioClip _blendSE;
     private AudioSource _audioSource;
+    private SpriteRenderer _spriteRenderer;
 
-    private Bubble _overlapBubble;
+
+    public Bubble _overlapBubble;
 
     private Rigidbody2D _rigidbody;
-    public Vector2 Dir { get;set;}
+    public Vector2 Dir { get; set; }
 
     private int level = 1;
     private int size;
     public BubbleType Type { get; private set; }
     void Start()
     {
-        
+
     }
 
     /// <summary>
     /// シャボンどおしが重なっているか
     /// </summary>
-    public bool IsOverlap { get; private set; }
+    public bool IsOverlap => _overlapBubble != null;
 
     /// <summary>
     /// 初期化処理
@@ -38,10 +44,15 @@ public class Bubble : MonoBehaviour
         transform.localScale = new Vector2(size, size);
         _audioSource = this.AddComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        var power = 5.0f;
-        _rigidbody.AddForce(dir*power,ForceMode2D.Impulse);
-        Dir = dir;  
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+
+        var setting = _settings.FirstOrDefault(x => x.type == type);
+        _spriteRenderer.color = setting.colors[level - 1];
+        this.size = size;
+        Dir = dir;
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -49,10 +60,10 @@ public class Bubble : MonoBehaviour
 
     }
 
-  /* private void FixedUpdate()
+    private void FixedUpdate()
     {
         _rigidbody.linearVelocity = Dir * 5.0f;
-    }*/
+    }
 
     /// <summary>
     /// Focusされている
@@ -69,18 +80,29 @@ public class Bubble : MonoBehaviour
     {
         _audioSource.PlayOneShot(_blendSE);
         // Note:これだと破壊と同時にSEが止まるため要修正
-        Destroy(gameObject,0.5f);
+        Destroy(gameObject, 0.5f);
     }
 
     /// <summary>
     /// シャボンどうしを合成
     /// </summary>
-    public void BlendBubbles()
+    public Bubble BlendBubbles()
     {
-        _audioSource.PlayOneShot(_blendSE);
+
+        var bubule = Instantiate(prefab);
+        // _audioSource.PlayOneShot(_blendSE);
+        bubule.level = level + 1;
+        bubule.transform.position = transform.position;
+        bubule.Initialize(Type, size, Dir);
+
+        Destroy(this.gameObject, 0.1f);
+        Destroy(_overlapBubble.gameObject, 0.1f);
+
+        return bubule;
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.TryGetComponent<Bubble>(out var bubble)) return;
 
@@ -91,11 +113,12 @@ public class Bubble : MonoBehaviour
         _overlapBubble = bubble;
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (!collision.gameObject.TryGetComponent<Bubble>(out var bubble)) return;
 
         if (_overlapBubble != bubble) return;
         _overlapBubble = null;
     }
+
 }

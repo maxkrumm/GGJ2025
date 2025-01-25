@@ -6,15 +6,28 @@ public class OsakiDebugManager : MonoBehaviour
     public int size = 1;
     public Vector2 dir = Vector2.zero;
 
+     public Bubble bubble1;
+     public Bubble bubble2;
+
     void Start()
     {
-        var bubble = Instantiate(_bubblePrefab);
-        bubble.Initialize(BubbleType.ƒhƒ‰ƒ€, size, dir);
+        bubble1 = Instantiate(_bubblePrefab);
+        bubble1.Initialize(BubbleType.ƒhƒ‰ƒ€, size, dir);
+
+        bubble2 = Instantiate(_bubblePrefab);
+        bubble2.Initialize(BubbleType.ƒhƒ‰ƒ€, size, dir);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetMouseButtonDown(0)) 
+        {
+            if (bubble1.IsOverlap)
+            {
+                bubble1.BlendBubbles();
 
+            }
+        }
     }
 }
