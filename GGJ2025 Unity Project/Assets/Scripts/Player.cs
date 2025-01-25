@@ -60,19 +60,19 @@ public class Player : MonoBehaviour
             num++;
            
         }
-        BubbleType bubbleTypes= BubbleType.ドラム;
+        BubbleType bubbleTypes= BubbleType.Dram;
         if (num > 0)
         {
-             bubbleTypes = BubbleType.ドラム;
+             bubbleTypes = BubbleType.Dram;
            
         }
         if (num > 33)
         {
-             bubbleTypes = BubbleType.ギター;
+             bubbleTypes = BubbleType.Guitar;
         }
         if (num > 66)
         {
-             bubbleTypes = BubbleType.ベース;
+             bubbleTypes = BubbleType.Bass;
         }
         if (push_count > 1)
         {
