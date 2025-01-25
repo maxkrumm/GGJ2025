@@ -28,7 +28,7 @@ public class Bubble : MonoBehaviour
     public Vector2 Dir { get; set; }
 
     [HideInInspector] public int level = 1;
-    [HideInInspector] public int size;
+    [HideInInspector] public int size = 1;
 
     /// <summary>
     /// 
@@ -55,7 +55,7 @@ public class Bubble : MonoBehaviour
     /// <param name="size">�V���{���ʂ̃T�C�Y3�i�K</param>
     public void Initialize(BubbleType type, int size, Vector2 dir)
     {
-        Debug.Log("BUBBLE: " + Type + "  Size " + size.ToString() + "  Level " + level.ToString());
+
         transform.localScale = new Vector2(size, size) * _sizeMultiplay;
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -65,7 +65,7 @@ public class Bubble : MonoBehaviour
         this.size = size;
         Dir = dir;
         Type = type;
-
+        Debug.Log("BUBBLE: " + Type + "  Size " + size + "  Level " + level);
         _speed = _defaultSpeed;
         typeInt = (int)Type;
 

@@ -12,12 +12,10 @@ public class BubbleAudioPlayer : MonoBehaviour
 
     private bool triggerEventOnNextBeat = false;
 
-    private void OnEnable()
+    void Start()
     {
         bubble = GetComponent<Bubble>();
-
-        // Subscribe to the beat event
-         AudioManager.Instance.OnGrid.AddListener(TriggerSoundOnBeat);
+        
         if (bubble.typeInt == 0)
         AkSoundEngine.SetSwitch("Music_Group", "Rythm", gameObject);
 
@@ -44,6 +42,9 @@ public class BubbleAudioPlayer : MonoBehaviour
 
         else if (bubble.level == 3)
         AkSoundEngine.SetSwitch("Music_Level", "L3", gameObject);
+
+        // Subscribe to the beat event
+        AudioManager.Instance.OnGrid.AddListener(TriggerSoundOnBeat);
 
     }
 
