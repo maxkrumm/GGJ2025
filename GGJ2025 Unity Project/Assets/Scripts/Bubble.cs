@@ -6,8 +6,17 @@ public enum BubbleType { Dram, Guitar, Bass }
 
 public class Bubble : MonoBehaviour
 {
-    [SerializeField] private Bubble prefab;
     [SerializeField] private BubbleSetting[] _settings;
+
+    [SerializeField] private float _defaultSpeed = 1.0f;
+    [SerializeField] private float _overlapedSpeed = 0.5f;
+
+    [Header("サイズ係数")]
+    [SerializeField] private float _sizeMultiplay = 1.0f;
+
+
+    [Header("trueなら重なった場合にスピードが減速する,falseの場合一定時間止まる")]
+    [SerializeField] private bool IsOverlapAction = false;
 
     private AudioClip _moveSE;
     private AudioClip _breakSE;
@@ -15,6 +24,7 @@ public class Bubble : MonoBehaviour
     private AudioSource _audioSource;
     private SpriteRenderer _spriteRenderer;
 
+    private float _speed = 1.0f;
 
     public Bubble _overlapBubble;
 
@@ -23,6 +33,12 @@ public class Bubble : MonoBehaviour
 
     private int level = 1;
     private int size;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private float _stopTimer = 0.0f;
+
     public BubbleType Type { get; private set; }
     void Start()
     {
@@ -41,7 +57,7 @@ public class Bubble : MonoBehaviour
     /// <param name="size">シャボン玉のサイズ3段階</param>
     public void Initialize(BubbleType type, int size, Vector2 dir)
     {
-        transform.localScale = new Vector2(size, size);
+        transform.localScale = new Vector2(size, size) * _sizeMultiplay;
         _audioSource = this.AddComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -51,18 +67,28 @@ public class Bubble : MonoBehaviour
         this.size = size;
         Dir = dir;
 
+        _speed = _defaultSpeed;
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        if (_stopTimer > 0.0f)
+        {
+            _stopTimer -= Time.deltaTime;
+            _speed = 0;
+        }
+        else
+        {
+            _speed = _defaultSpeed;
+        }
 
     }
 
     private void FixedUpdate()
     {
-        _rigidbody.linearVelocity = Dir * 5.0f;
+       _rigidbody.linearVelocity = Dir * _speed;
     }
 
     /// <summary>
@@ -78,11 +104,11 @@ public class Bubble : MonoBehaviour
     /// </summary>
     public void BreakBubble()
     {
-        _audioSource.PlayOneShot(_blendSE);
+        //_audioSource.PlayOneShot(_blendSE);
         // Note:これだと破壊と同時にSEが止まるため要修正
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject);
     }
-
+    [SerializeField] private Bubble prefab;
     /// <summary>
     /// シャボンどうしを合成
     /// </summary>
@@ -108,9 +134,15 @@ public class Bubble : MonoBehaviour
 
         if (_overlapBubble != null) return; // 既に別のと重なっている場合、合成は不要のため
 
-        if (bubble.Type != Type || bubble.level != level) return;
+        if (bubble.Type != Type || bubble.level != level||bubble.size!=size) return;
 
         _overlapBubble = bubble;
+
+        // 重複時はクリックしやすいよう挙動をゆっくりに
+        if (IsOverlapAction)
+            _speed = _overlapedSpeed;
+        else
+            _stopTimer = 2f;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -119,6 +151,12 @@ public class Bubble : MonoBehaviour
 
         if (_overlapBubble != bubble) return;
         _overlapBubble = null;
+
+        if (IsOverlapAction)
+            _speed = _defaultSpeed;
+        else
+            _stopTimer = 0f;
+
     }
 
 }

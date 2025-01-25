@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private Transform _spawnPoint;
     [SerializeField] Bubble _bubulePrefab;
     public GameObject meter;
     public int num;
    public int push_count;
    public float timeleft;
-    public int bubblesize=0;
+    public int bubblesize=1;
     const int Max=99;
     const int Min = 0;
     bool changeRotate;
@@ -38,10 +39,10 @@ public class Player : MonoBehaviour
             rotate = -1;
         }
 
-        meter.transform.Rotate(rotate,0,0);
-        angle = meter.transform.eulerAngles.x;
+        //meter.transform.Rotate(0,0,rotate);
+        angle = (angle + 1) % 90;
         dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-
+        Debug.Log(dir);
     }
 
  
@@ -74,10 +75,6 @@ public class Player : MonoBehaviour
         {
              bubbleTypes = BubbleType.Bass;
         }
-        if (push_count > 1)
-        {
-            bubblesize = 1;
-        }
         if (push_count >= 3)
         {
             bubblesize = 2;
@@ -94,7 +91,7 @@ public class Player : MonoBehaviour
             {
                 timeleft = 0.75f;
                 push_count++;
-                var bubble = Instantiate(_bubulePrefab);
+                var bubble = Instantiate(_bubulePrefab,_spawnPoint.position,Quaternion.identity);
                 bubble.Initialize(bubbleTypes, bubblesize, dir);
             }
 
@@ -102,11 +99,11 @@ public class Player : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             push_count = 0;
-            bubblesize = 0;
+            bubblesize = 1;
         }
-        Debug.Log(push_count);
-        Debug.Log(num);
-        Debug.Log(bubbleTypes);
+        //Debug.Log(push_count);
+        //Debug.Log(num);
+        //Debug.Log(bubbleTypes);
         if (num <= Min)
         {
             num = Min;

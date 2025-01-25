@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class PlayerBubbleClicker : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] LayerMask layerMask;
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0)) // 左クリックを検出
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
+
+            if (hit.collider == null) return;
+
+            
+            var bubble = hit.collider.GetComponent<Bubble>();
+            if (bubble.IsOverlap)
+                bubble.BlendBubbles();
+            else
+                bubble.BreakBubble();   
+            
+        }
     }
 }

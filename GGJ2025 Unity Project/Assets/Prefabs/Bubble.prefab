@@ -166,12 +166,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb51a04f73fff6468d19dd772202b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: -2984697493844781445}
   _settings:
   - {fileID: 11400000, guid: b705284073dd18348ae427ab1d16f5d8, type: 2}
   - {fileID: 11400000, guid: 4dcb7704145be7741995a0ac3d942735, type: 2}
   - {fileID: 11400000, guid: e017bed561a7cc0468d141bf485506f4, type: 2}
+  _defaultSpeed: 5
+  _overlapedSpeed: 0.5
+  _sizeMultiplay: 1.5
+  IsOverlapAction: 1
   _overlapBubble: {fileID: 0}
+  prefab: {fileID: -2984697493844781445}
 --- !u!1 &3083061007557946493
 GameObject:
   m_ObjectHideFlags: 0
