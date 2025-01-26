@@ -87,6 +87,7 @@ public class Bubble : MonoBehaviour
 
         BubbleAudioPlayer bubbleAudioPlayer = gameObject.GetComponent<BubbleAudioPlayer>();
         bubbleAudioPlayer.QueueSound();
+        bubbleAudioPlayer.PlaySound();
 
         Debug.Log("BUBBLE: " + Type + "  Size " + size + "  Level " + level);
 

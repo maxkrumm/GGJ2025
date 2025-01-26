@@ -12,7 +12,7 @@ public class BubbleAudioPlayer : MonoBehaviour
 
     private bool triggerEventOnNextBeat = false;
 
-    void Start()
+    public void PlaySound()
     {
         bubble = GetComponent<Bubble>();
         
