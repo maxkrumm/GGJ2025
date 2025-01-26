@@ -11,7 +11,14 @@ public class BackGroundManager : MonoBehaviour
     [SerializeField] private SpriteRenderer[] renderers;
     private int currentSprite;
 
+    public static BackGroundManager Instance;
+
     private List<Bubble> bubbles  = new List<Bubble>();
+    
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,17 +31,20 @@ public class BackGroundManager : MonoBehaviour
     {
 
     }
-
+    public void Remove(Bubble bubble)
+    {
+        bubbles.Remove(bubble);
+    }
     public void Add(Bubble bubble) 
     {
         // そのタイプが一つでも含まれていなければ
-        if (!bubbles.Any(x => x.Type == bubble.Type))
-        {
-            var sprite = m_Sprites[(int)bubble.Type];
-            //renderers
-            //StartCoroutine(FadeCoroutine());
-        }
-        bubbles.Add(bubble);
+        //if (!bubbles.Any(x => x.Type == bubble.Type))
+        //{
+        //    var sprite = m_Sprites[(int)bubble.Type];
+        //    //renderers
+        //    StartCoroutine(FadeCoroutine(sprite));
+        //}
+        //bubbles.Add(bubble);
     }
 
 
@@ -45,6 +55,8 @@ public class BackGroundManager : MonoBehaviour
 
         // 遷移先の画像を後ろ側に表示
         renderers[next].enabled = true;
+        renderers[next].sprite = spriteW;
+
 
         float elapsedTime = 0f;
 

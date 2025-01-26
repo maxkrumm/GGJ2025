@@ -1,5 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Threading;
+using Cysharp.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 
 public class Player : MonoBehaviour
@@ -22,9 +26,12 @@ public class Player : MonoBehaviour
     
 
     private List<Bubble> chargedBubbles = new List<Bubble>();
- 
 
 
+    private void Start()
+    {
+        Init(this.GetCancellationTokenOnDestroy()).Forget();
+    }
 
     void Meter()
     {
@@ -53,7 +60,7 @@ public class Player : MonoBehaviour
 
  
     // Update is called once per frame
-    void Update()
+    void Update1()
     {
         Meter();
     
@@ -97,40 +104,41 @@ public class Player : MonoBehaviour
         }
       
       
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            var bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
-            bubble.Initialize(bubbleTypes, bubblesize, dir);
-            chargedBubbles.Add(bubble);
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            foreach(var bubble in chargedBubbles)
-            {
-                bubble._speed = 0;
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    var bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
+        //    bubble.Initialize(bubbleTypes, bubblesize, dir);
+        //    chargedBubbles.Add(bubble);
+        //}
+        //else if  (Input.GetKey(KeyCode.Space))
+        //{
+        //    timeleft -= Time.deltaTime;
+        //    if (timeleft <= 0)
+        //    {
+        //        timeleft = 0.75f;
+        //        push_count++;
+
+
+        //    }
+        //    foreach (var bubble in chargedBubbles)
+        //    {
+        //        bubble.SetScale(bubblesize);
+        //    }
+
+        //}
+        //else if(Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    foreach(var bubble in chargedBubbles)
+        //    {
+        //        bubble._speed = 0;
                 
-            }
-            chargedBubbles.Clear();
-            push_count = 0;
-            bubblesize = 1;
-            limitcreate=0;
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            timeleft -= Time.deltaTime;
-            if (timeleft <= 0)
-            {
-                timeleft = 0.75f;
-                push_count++;
-               
-
-            }
-            foreach (var bubble in chargedBubbles)
-            {
-                bubble.SetScale(bubblesize);
-            }
-
-        }
+        //    }
+        //    chargedBubbles.Clear();
+        //    push_count = 0;
+        //    bubblesize = 1;
+        //    limitcreate=0;
+        //}
+       
         //Debug.Log(push_count);
         //Debug.Log(num);
         //Debug.Log(bubbleTypes);
@@ -138,9 +146,56 @@ public class Player : MonoBehaviour
         {
             num = Min;
         }
-         if (num > Max)
-            {
-                num=Max;
-            }
+
+        if (num > Max)
+        {
+            num=Max;
+        }
     }
+
+
+    private async UniTask Init(CancellationToken token)
+    {
+        while (!token.IsCancellationRequested)
+        {
+            Bubble bubble = null;
+            var randomType = Random.Range(0, 2);
+
+            if (!Input.GetKeyDown(KeyCode.Space))
+            {
+
+                await UniTask.Yield(token);
+                continue;
+            }
+
+            float timer  = 0f;
+
+            bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
+            bubble.Initialize((BubbleType)randomType);
+
+            int size = 1;
+            while (Input.GetKey(KeyCode.Space)&&!token.IsCancellationRequested)
+            {
+                timer += Time.deltaTime;
+
+                if (timer >= 2)
+                    bubble.SetScale(2);
+                else if (timer >= 3)
+                {
+                    bubble.SetScale(3);
+                    break;
+                }
+                await UniTask.Yield(token);
+            }
+
+            var angle = Random.Range(0, 360);
+            angle = angle % 90;
+
+            dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+            bubble.Shoot(dir);
+            bubble._speed = 5.0f;
+
+        }
+    }
+   
 }

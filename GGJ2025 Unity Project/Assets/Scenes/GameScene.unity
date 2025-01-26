@@ -2147,7 +2147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf689b0f31c99b4d862444ec74218c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 30
+  count: 300
   bubbleClicker: {fileID: 1468252837}
   player: {fileID: 1468252841}
 --- !u!114 &1468252837
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   - {fileID: -3179561347456159073, guid: b793cdec9f0046d4391c3a62334f7180, type: 3}
   - {fileID: -6484854548922872040, guid: d0a92e8f8376cd442a730c6bfe5a972a, type: 3}
   renderers: []
-  duration: 30
+  duration: 300
 --- !u!114 &1468252841
 MonoBehaviour:
   m_ObjectHideFlags: 0

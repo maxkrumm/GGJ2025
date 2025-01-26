@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 980132110511954925}
   - component: {fileID: -2984697493844781445}
   - component: {fileID: 1101187858459836756}
+  - component: {fileID: 8865212802613584281}
   m_Layer: 6
   m_Name: Bubble
   m_TagString: Bubble
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -475248241841145503, guid: 6012a5d1fa1674246acda30ecf8857f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,11 +172,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b705284073dd18348ae427ab1d16f5d8, type: 2}
   - {fileID: 11400000, guid: 4dcb7704145be7741995a0ac3d942735, type: 2}
   - {fileID: 11400000, guid: e017bed561a7cc0468d141bf485506f4, type: 2}
-  _defaultSpeed: 0
+  _defaultSpeed: 9
   _overlapedSpeed: 0.5
   _sizeMultiplay: 1.5
   IsOverlapAction: 1
-  _speed: 1
+  _speed: 0
   _overlapBubble: {fileID: 0}
   level: 1
   size: 0
@@ -201,6 +202,28 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: bdf6361ac1444c340875152f14433465, type: 2}
+--- !u!95 &8865212802613584281
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709029815026359123}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ee2132e946472b4f80595f15c891dc8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3083061007557946493
 GameObject:
   m_ObjectHideFlags: 0

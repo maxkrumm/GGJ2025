@@ -19,16 +19,17 @@ public class Bubble : MonoBehaviour
     [SerializeField] private bool IsOverlapAction = false;
 
     private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
 
-    public float _speed = 0;
+    public float _speed = 0.0f;
 
     public Bubble _overlapBubble;
 
     private Rigidbody2D _rigidbody;
     public Vector2 Dir { get; set; }
 
-    [HideInInspector] public int level = 1;
-    [HideInInspector] public int size = 1;
+    public int level = 1;
+    public int size = 1;
 
     /// <summary>
     /// 
@@ -47,48 +48,60 @@ public class Bubble : MonoBehaviour
     /// �V���{���ǂ������d�Ȃ��Ă��邩
     /// </summary>
     public bool IsOverlap => _overlapBubble != null;
-
-    public void SetScale(int size)
+    public void OnDestroy()
     {
-        transform.localScale = new Vector2(size, size) * _sizeMultiplay;
-
+        BackGroundManager.Instance.Remove(this);
     }
     /// <summary>
     /// ����������
     /// </summary>
     /// <param name="type">�V���{���ʎ��</param>
     /// <param name="size">�V���{���ʂ̃T�C�Y3�i�K</param>
-    public void Initialize(BubbleType type, int size, Vector2 dir)
+    public void Initialize(BubbleType type)
     {
+        //BackGroundManager.Instance.Add(this);
+        SetScale(1);
+        Type = type;
+        typeInt = (int)Type;
 
-        transform.localScale = new Vector2(size, size) * _sizeMultiplay;
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
 
         var setting = _settings.FirstOrDefault(x => x.type == type);
         _spriteRenderer.color = setting.colors[level - 1];
+
+               
+        
+    }
+
+    public void SetScale(int size)
+    {
         this.size = size;
+        transform.localScale = new Vector2(size, size) * _sizeMultiplay;
+    }
+
+    public void Shoot(Vector2 dir)
+    {
         Dir = dir;
-        Type = type;
-        Debug.Log("BUBBLE: " + Type + "  Size " + size + "  Level " + level);
-       
-        typeInt = (int)Type;
 
         BubbleAudioPlayer bubbleAudioPlayer = gameObject.GetComponent<BubbleAudioPlayer>();
         bubbleAudioPlayer.QueueSound();
-    }
 
+        Debug.Log("BUBBLE: " + Type + "  Size " + size + "  Level " + level);
+
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+
 
     }
 
     private void FixedUpdate()
     {
-       _rigidbody.linearVelocity = Dir * _speed;
+        _rigidbody.linearVelocity = Dir * _speed;
     }
 
     /// <summary>
@@ -104,8 +117,8 @@ public class Bubble : MonoBehaviour
     /// </summary>
     public void BreakBubble()
     {
-
-        Destroy(gameObject);
+        _animator.SetTrigger("Break");
+        Destroy(gameObject, 0.5f);
     }
     [SerializeField] private Bubble prefab;
     /// <summary>
@@ -113,12 +126,15 @@ public class Bubble : MonoBehaviour
     /// </summary>
     public Bubble BlendBubbles()
     {
+        //_animator.SetTrigger("Break");
 
         var bubule = Instantiate(prefab);
         // _audioSource.PlayOneShot(_blendSE);
         bubule.level = level + 1;
         bubule.transform.position = transform.position;
-        bubule.Initialize(Type, size, Dir);
+        bubule.Initialize(Type);
+        bubule.SetScale(size);
+        bubule.Shoot(Dir);
 
         Destroy(this.gameObject, 0.1f);
         Destroy(_overlapBubble.gameObject, 0.1f);
@@ -133,15 +149,13 @@ public class Bubble : MonoBehaviour
 
         if (_overlapBubble != null) return; // ���ɕʂ̂Əd�Ȃ��Ă���ꍇ�A�����͕s�v�̂���
 
-        if (bubble.Type != Type || bubble.level != level||bubble.size!=size) return;
+        if (bubble.Type != Type || bubble.level != level || bubble.size != size) return;
 
         _overlapBubble = bubble;
 
         // �d�����̓N���b�N���₷���悤��������������
-        if (IsOverlapAction)
             _speed = _overlapedSpeed;
-        else
-            _stopTimer = 2f;
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -154,5 +168,6 @@ public class Bubble : MonoBehaviour
         _speed = _defaultSpeed;
 
     }
+
 
 }

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   colors:
-  - {r: 0.25524664, g: 0, b: 1, a: 1}
+  - {r: 0.71819323, g: 1, b: 0.390566, a: 1}
   - {r: 0, g: 0.7514851, b: 1, a: 1}
   - {r: 0, g: 1, b: 0.6495023, a: 1}
