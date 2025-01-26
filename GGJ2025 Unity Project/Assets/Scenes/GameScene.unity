@@ -2196,7 +2196,9 @@ MonoBehaviour:
   - {fileID: -8538090553041344634, guid: f6f3f173091510f4eb51aa0a54d05b4a, type: 3}
   - {fileID: -3179561347456159073, guid: b793cdec9f0046d4391c3a62334f7180, type: 3}
   - {fileID: -6484854548922872040, guid: d0a92e8f8376cd442a730c6bfe5a972a, type: 3}
-  renderers: []
+  renderers:
+  - {fileID: 559724048}
+  - {fileID: 1243093834}
   duration: 300
 --- !u!114 &1468252841
 MonoBehaviour:

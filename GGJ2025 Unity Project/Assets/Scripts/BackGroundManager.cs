@@ -38,13 +38,13 @@ public class BackGroundManager : MonoBehaviour
     public void Add(Bubble bubble) 
     {
         // ‚»‚Ìƒ^ƒCƒv‚ªˆê‚Â‚Å‚àŠÜ‚Ü‚ê‚Ä‚¢‚È‚¯‚ê‚Î
-        //if (!bubbles.Any(x => x.Type == bubble.Type))
-        //{
-        //    var sprite = m_Sprites[(int)bubble.Type];
-        //    //renderers
-        //    StartCoroutine(FadeCoroutine(sprite));
-        //}
-        //bubbles.Add(bubble);
+        if (!bubbles.Any(x => x.Type == bubble.Type))
+        {
+            var sprite = m_Sprites[(int)bubble.Type];
+            //renderers
+            StartCoroutine(FadeCoroutine(sprite));
+        }
+        bubbles.Add(bubble);
     }
 
 

@@ -59,7 +59,6 @@ public class Bubble : MonoBehaviour
     /// <param name="size">�V���{���ʂ̃T�C�Y3�i�K</param>
     public void Initialize(BubbleType type)
     {
-        //BackGroundManager.Instance.Add(this);
         SetScale(1);
         Type = type;
         typeInt = (int)Type;
@@ -72,7 +71,8 @@ public class Bubble : MonoBehaviour
         _spriteRenderer.color = setting.colors[level - 1];
 
                
-        
+        BackGroundManager.Instance.Add(this);
+
     }
 
     public void SetScale(int size)
@@ -131,7 +131,7 @@ public class Bubble : MonoBehaviour
 
         var bubule = Instantiate(prefab);
         // _audioSource.PlayOneShot(_blendSE);
-        bubule.level = level + 1;
+        bubule.level = Mathf.Clamp(level + 1, 1, 3);
         bubule.transform.position = transform.position;
         bubule.Initialize(Type);
         bubule.SetScale(size);
