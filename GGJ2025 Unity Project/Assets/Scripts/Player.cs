@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 
 public class Player : MonoBehaviour
@@ -6,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] Bubble _bubulePrefab;
     public GameObject meter;
+    private int limitcreate;
     public int num;
    public int push_count;
    public float timeleft;
@@ -16,6 +18,11 @@ public class Player : MonoBehaviour
     float rotate;
     float angle;
     Vector2 dir;
+    Bubble bubblecs = new Bubble();
+    
+
+    private List<Bubble> chargedBubbles = new List<Bubble>();
+ 
 
 
 
@@ -38,7 +45,6 @@ public class Player : MonoBehaviour
         {
             rotate = -1;
         }
-
         //meter.transform.Rotate(0,0,rotate);
         angle = (angle + 1) % 90;
         dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
@@ -89,23 +95,41 @@ public class Player : MonoBehaviour
         {
             bubblesize = 3;
         }
+      
+      
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            var bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
+            bubble.Initialize(bubbleTypes, bubblesize, dir);
+            chargedBubbles.Add(bubble);
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            foreach(var bubble in chargedBubbles)
+            {
+                bubble._speed = 0;
+                
+            }
+            chargedBubbles.Clear();
+            push_count = 0;
+            bubblesize = 1;
+            limitcreate=0;
+        }
         if (Input.GetKey(KeyCode.Space))
         {
-
             timeleft -= Time.deltaTime;
             if (timeleft <= 0)
             {
                 timeleft = 0.75f;
                 push_count++;
-                var bubble = Instantiate(_bubulePrefab,_spawnPoint.position,Quaternion.identity);
-                bubble.Initialize(bubbleTypes, bubblesize, dir);
+               
+
+            }
+            foreach (var bubble in chargedBubbles)
+            {
+                bubble.SetScale(bubblesize);
             }
 
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            push_count = 0;
-            bubblesize = 1;
         }
         //Debug.Log(push_count);
         //Debug.Log(num);
@@ -119,6 +143,4 @@ public class Player : MonoBehaviour
                 num=Max;
             }
     }
-    
-    
 }

@@ -20,7 +20,7 @@ public class Bubble : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
-    private float _speed = 1.0f;
+    public float _speed = 0;
 
     public Bubble _overlapBubble;
 
@@ -48,6 +48,11 @@ public class Bubble : MonoBehaviour
     /// </summary>
     public bool IsOverlap => _overlapBubble != null;
 
+    public void SetScale(int size)
+    {
+        transform.localScale = new Vector2(size, size) * _sizeMultiplay;
+
+    }
     /// <summary>
     /// ����������
     /// </summary>
@@ -66,7 +71,7 @@ public class Bubble : MonoBehaviour
         Dir = dir;
         Type = type;
         Debug.Log("BUBBLE: " + Type + "  Size " + size + "  Level " + level);
-        _speed = _defaultSpeed;
+       
         typeInt = (int)Type;
 
         BubbleAudioPlayer bubbleAudioPlayer = gameObject.GetComponent<BubbleAudioPlayer>();
