@@ -10,34 +10,42 @@
     "Type": "User",
     "GUID": "{4D702DE8-2892-4C9F-ADD3-49D83CFBBDB0}",
     "Language": "SFX",
-    "Hash": "{2B746CD7-5516-14FA-4D5A-8C8EB33E0957}",
+    "Hash": "{E9DD0AA1-2816-F10F-6D23-7B3FF167AAA8}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
     "Media": [
      {
-      "Id": "13511766",
+      "Id": "9919301",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L1_05.wav",
-      "CachePath": "0D/{0D55B1B4-5604-8029-6974-6076D8B5B2E8}.wem"
+      "ShortName": "mus_rythm_toms_L2_A.wav",
+      "CachePath": "A6/{A6B9373D-7BF6-0243-6DF2-681EA9C4E082}.wem"
      },
      {
-      "Id": "27426346",
+      "Id": "16284772",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L1_03.wav",
-      "CachePath": "F2/{F2511DF9-8D2A-8C9B-747D-82BD39271D67}.wem"
+      "ShortName": "mus_arp_low_L3_01_A2.wav",
+      "CachePath": "6C/{6C217B81-6C4A-4A1D-A0BE-870C5EEE949E}.wem"
      },
      {
-      "Id": "50569044",
+      "Id": "34486136",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L2_03.wav",
-      "CachePath": "3A/{3A2AF3BD-8240-3559-C104-76A8115F9AA1}.wem"
+      "ShortName": "mus_rythm_toms_L2_D.wav",
+      "CachePath": "EF/{EFD60B54-E3D4-63AC-4116-26EF9227C6AE}.wem"
+     },
+     {
+      "Id": "47678939",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_toms_L2_E.wav",
+      "CachePath": "87/{87F05CB8-323D-484A-CEA4-81DEE6A397F4}.wem"
      },
      {
       "Id": "50950088",
@@ -45,63 +53,119 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_rythm_hihats_L1_03.wav",
-      "CachePath": "5D/{5DB4088A-0F8A-B103-8ABD-842FED3D71B3}.wem"
+      "CachePath": "FF/{FF3597CF-28EC-B4E9-39E2-B270F8154FC0}.wem"
      },
      {
-      "Id": "65243380",
+      "Id": "51187793",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L2_05.wav",
-      "CachePath": "DC/{DCFAB8B4-D7A4-1B5F-6255-793A18E0951E}.wem"
+      "ShortName": "mus_arp_low_L2_01_A1.wav",
+      "CachePath": "6D/{6DF848A6-8DE5-F694-E580-33B0E9E14632}.wem"
      },
      {
-      "Id": "98447303",
+      "Id": "55003208",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L2_05.wav",
-      "CachePath": "D7/{D78D440F-1F87-944C-BDE7-DCE557FB2C9C}.wem"
+      "ShortName": "mus_arp_mid_L3_01_A2.wav",
+      "CachePath": "44/{4454A27A-C908-1AFF-CE84-1538F6A87579}.wem"
      },
      {
-      "Id": "106436164",
+      "Id": "83928472",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_shimmer_L1_03_loop.wav",
-      "CachePath": "1E/{1EFD3C48-22F4-8924-C0B0-1FDEE42066E4}.wem"
+      "ShortName": "mus_arp_low_L2_01_D.wav",
+      "CachePath": "80/{8098E755-734B-6477-5AC2-0C0C12EBEF1F}.wem"
      },
      {
-      "Id": "108256500",
+      "Id": "87404568",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L3_01.wav",
-      "CachePath": "77/{778E94FD-D8B0-AA1A-67D2-2C53FC28FBEF}.wem"
+      "ShortName": "mus_arp_low_L3_01_E.wav",
+      "CachePath": "BC/{BCCAB255-C32C-CBB6-7D2F-7650724F26E4}.wem"
      },
      {
-      "Id": "126558413",
+      "Id": "95719797",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L3_04.wav",
-      "CachePath": "3E/{3E45A5EC-430E-057C-44D6-001CAEDCCA67}.wem"
+      "ShortName": "mus_arp_high_L2_01_C.wav",
+      "CachePath": "67/{67C56E3A-63A0-0889-2D03-07BCDB78D579}.wem"
      },
      {
-      "Id": "166469346",
+      "Id": "97216773",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L3_04.wav",
-      "CachePath": "7C/{7C1A18CA-DC23-A7D4-7671-14346B1183FF}.wem"
+      "ShortName": "mus_rythm_toms_L3_C.wav",
+      "CachePath": "06/{0673DCC6-1069-C369-02F1-D30FD4242013}.wem"
      },
      {
-      "Id": "184372535",
+      "Id": "104957520",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L3_05.wav",
-      "CachePath": "66/{66B46B9F-D27E-FC91-2A2D-065DB5A1926D}.wem"
+      "ShortName": "mus_amb_bass_L2_01_loop.wav",
+      "CachePath": "45/{457E5E42-0F6B-1586-1AE9-F477D80ED913}.wem"
+     },
+     {
+      "Id": "105853286",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_toms_L3_E.wav",
+      "CachePath": "C4/{C42506D5-27B1-9E0F-0BE5-E7FCEF3C1C6B}.wem"
+     },
+     {
+      "Id": "116271686",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_low_L1_01_A2.wav",
+      "CachePath": "DF/{DFF2FEE2-B5E8-A939-E604-84913E80E604}.wem"
+     },
+     {
+      "Id": "139544716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_amb_tonal_L3_01_D_Loop.wav",
+      "CachePath": "8D/{8D9A848D-7EF7-F343-5E83-E44FF3400E4D}.wem"
+     },
+     {
+      "Id": "153820416",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_high_L1_01_D.wav",
+      "CachePath": "0A/{0AB1B459-32A8-4AD7-4CA1-4780FA298348}.wem"
+     },
+     {
+      "Id": "162091647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L1_01_A2.wav",
+      "CachePath": "14/{145EF419-FFFF-EC00-B7BF-3F3CF568E3FD}.wem"
+     },
+     {
+      "Id": "164894965",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L3_01_D.wav",
+      "CachePath": "65/{653B9B75-9D87-6A32-9CC2-83D3DE9820A9}.wem"
+     },
+     {
+      "Id": "170448900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L3_01_A1.wav",
+      "CachePath": "81/{810A83B3-74E5-E02C-7852-6C2CC4FB795E}.wem"
      },
      {
       "Id": "193205753",
@@ -109,55 +173,79 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_rythm_hihats_L1_01.wav",
-      "CachePath": "96/{9688338E-06E4-9ACA-CEBA-81104B025D7D}.wem"
+      "CachePath": "D1/{D1514D34-3722-173F-7810-CBB154E49DFD}.wem"
      },
      {
-      "Id": "228902296",
+      "Id": "201211705",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L2_02.wav",
-      "CachePath": "05/{05A8584C-37E6-050F-7B77-9C60A9118044}.wem"
+      "ShortName": "mus_amb_tonal_L1_01_A_loop.wav",
+      "CachePath": "A4/{A42B4D27-0C40-8676-BE14-EB9231A1C02F}.wem"
      },
      {
-      "Id": "245124806",
+      "Id": "208289896",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L3_03.wav",
-      "CachePath": "B9/{B9DB0A98-F365-D5A4-A1D0-470641B1C0EB}.wem"
+      "ShortName": "mus_amb_shimmer_L3_01_loop.wav",
+      "CachePath": "60/{60FBB746-F869-ED6D-C3A2-7998D496F5FF}.wem"
      },
      {
-      "Id": "248415313",
+      "Id": "212214153",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L2_04.wav",
-      "CachePath": "B1/{B1BDBA3C-6C4D-857C-5264-DD695188CA99}.wem"
+      "ShortName": "mus_arp_low_L1_01_G.wav",
+      "CachePath": "7F/{7F28D1BC-A2FF-0788-0CD4-D994A07FD811}.wem"
      },
      {
-      "Id": "266764240",
+      "Id": "223792373",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_tonal_L1_03_loop.wav",
-      "CachePath": "92/{92709BB7-79D0-8827-508F-A0FBE14FA328}.wem"
+      "ShortName": "mus_rythm_hihats_L2_01.wav",
+      "CachePath": "70/{704807CB-E6A3-DE59-748E-E4F721013CDB}.wem"
      },
      {
-      "Id": "281592830",
+      "Id": "224561897",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_bass_L1_02_loop.wav",
-      "CachePath": "AA/{AAEE1361-5544-C872-EB38-801462053D18}.wem"
+      "ShortName": "mus_amb_tonal_L1_01_B_loop.wav",
+      "CachePath": "95/{953C0B67-9A1B-664A-DFF7-4C5F2E797B7F}.wem"
      },
      {
-      "Id": "297074494",
+      "Id": "248415030",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L3_03.wav",
-      "CachePath": "FC/{FC87E69C-7AE4-56D4-CB83-2E60BD46134E}.wem"
+      "ShortName": "mus_rythm_toms_L1_A.wav",
+      "CachePath": "15/{15380CED-666D-BD4D-CD38-779F0BB69145}.wem"
+     },
+     {
+      "Id": "282614588",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_low_L3_01_D.wav",
+      "CachePath": "DD/{DD2B9438-EEA9-F108-1AEE-DB8E8F58DC70}.wem"
+     },
+     {
+      "Id": "297424799",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_low_L1_01_E.wav",
+      "CachePath": "87/{87F70D90-436F-DCD3-354C-A16762C5A528}.wem"
+     },
+     {
+      "Id": "301063280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_toms_L3_D.wav",
+      "CachePath": "B1/{B175F6DA-52DE-354F-09D3-8803BF601B23}.wem"
      },
      {
       "Id": "304545416",
@@ -165,23 +253,31 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_rythm_kick_L1_02.wav",
-      "CachePath": "C1/{C1D0F3E1-F924-09EA-4BD9-C73CB00E43E3}.wem"
+      "CachePath": "48/{48B488D9-8404-6E93-51FB-39125D4CAD07}.wem"
      },
      {
-      "Id": "308065907",
+      "Id": "309076321",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L3_01.wav",
-      "CachePath": "0E/{0E1EA8EE-72C6-3BEC-5C8D-37E9EF487C95}.wem"
+      "ShortName": "mus_rythm_toms_L3_A.wav",
+      "CachePath": "13/{1377653D-9470-7673-2FAB-8BEA019BA955}.wem"
      },
      {
-      "Id": "345278550",
+      "Id": "316430871",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L1_02.wav",
-      "CachePath": "7C/{7CDA0CDB-910E-F15B-95E6-44ACFD58CDF9}.wem"
+      "ShortName": "mus_amb_tonal_L1_01_C_loop.wav",
+      "CachePath": "4A/{4A7B049B-9159-26CC-35AC-5702F17B3304}.wem"
+     },
+     {
+      "Id": "328220169",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_high_L1_01_E.wav",
+      "CachePath": "DA/{DACE74D0-106C-7A80-7FB6-FCDCD4C6F506}.wem"
      },
      {
       "Id": "352350184",
@@ -189,231 +285,359 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_rythm_kick_L1_05.wav",
-      "CachePath": "B9/{B9D1B2A2-B658-01F6-B33B-72F4712F2464}.wem"
+      "CachePath": "EA/{EAB89EB2-3934-4445-8766-EBC88E173783}.wem"
      },
      {
-      "Id": "359316687",
+      "Id": "359947245",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L1_04.wav",
-      "CachePath": "DE/{DE4004E5-D280-DA51-0CB9-7CA45BC552EB}.wem"
+      "ShortName": "mus_amb_tonal_L2_01_A_loop.wav",
+      "CachePath": "A1/{A1864AF0-89AD-0AFF-4B35-68898091C8C0}.wem"
      },
      {
-      "Id": "360585884",
+      "Id": "386664547",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L2_03.wav",
-      "CachePath": "CA/{CACC511A-99F0-37B7-F4D0-7E6907C95CBC}.wem"
+      "ShortName": "mus_arp_mid_L3_01_C.wav",
+      "CachePath": "28/{2894CA23-068B-CCA6-3887-0D678BEF0B34}.wem"
      },
      {
-      "Id": "368510496",
+      "Id": "395294821",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L2_05.wav",
-      "CachePath": "1A/{1A8D10C5-2648-471B-19F4-FC31498852BE}.wem"
+      "ShortName": "mus_arp_high_L1_01_A2.wav",
+      "CachePath": "4B/{4B657EFF-B5FD-F557-8E0A-8089520A8BAA}.wem"
      },
      {
-      "Id": "377658914",
+      "Id": "396938522",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_tonal_L1_06_loop.wav",
-      "CachePath": "2A/{2A97A944-B094-10EA-8E12-EE3F61029CED}.wem"
+      "ShortName": "mus_rythm_toms_L1_G.wav",
+      "CachePath": "A6/{A6E65149-514B-4028-502D-AA8EBF3AD700}.wem"
      },
      {
-      "Id": "387070428",
+      "Id": "406487424",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L3_01.wav",
-      "CachePath": "51/{5104012F-ECAA-17F5-877D-673B50FF263E}.wem"
+      "ShortName": "mus_arp_high_L3_01_C.wav",
+      "CachePath": "52/{52C62D31-937A-4D8A-02C1-77B3881A2FF6}.wem"
      },
      {
-      "Id": "395067114",
+      "Id": "418658936",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L3_02.wav",
-      "CachePath": "CD/{CDD2DC4C-0E31-D083-A105-DFAC380CCE00}.wem"
+      "ShortName": "mus_arp_mid_L2_01_G.wav",
+      "CachePath": "8D/{8D42AA24-2081-90E3-1AE3-62F59926B07F}.wem"
      },
      {
-      "Id": "396617998",
+      "Id": "422935243",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_tonal_L1_04_loop.wav",
-      "CachePath": "B4/{B48F871F-0896-E8E6-3956-0D1E2DB649E1}.wem"
+      "ShortName": "mus_arp_mid_L1_01_A1.wav",
+      "CachePath": "F5/{F51843FC-AE48-D004-8EAE-5F708AB98016}.wem"
      },
      {
-      "Id": "415439674",
+      "Id": "423807509",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_tonal_L1_05_loop.wav",
-      "CachePath": "14/{146062E5-1849-A316-ACDF-60B0DD40A244}.wem"
+      "ShortName": "mus_amb_tonal_L1_01_E_loop.wav",
+      "CachePath": "69/{69C9427F-1101-DACD-5C8B-DFB6912CD300}.wem"
      },
      {
-      "Id": "487778389",
+      "Id": "431203996",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L1_02.wav",
-      "CachePath": "4E/{4EB1CB55-649F-5735-C7BB-8E53CDA3434F}.wem"
+      "ShortName": "mus_arp_mid_L1_01_D.wav",
+      "CachePath": "37/{37639C36-F23E-C4ED-8EF9-3A67DD7947C4}.wem"
      },
      {
-      "Id": "495964861",
+      "Id": "439101670",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L2_02.wav",
-      "CachePath": "88/{887788E8-0627-4C3F-E54E-09E5C7219EA9}.wem"
+      "ShortName": "mus_arp_low_L3_01_A1.wav",
+      "CachePath": "96/{9627605D-8A51-E178-6384-95FDF6A32868}.wem"
      },
      {
-      "Id": "502293123",
+      "Id": "460437983",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_shimmer_L1_02_loop.wav",
-      "CachePath": "8A/{8A6D4EDE-A9CE-C2EB-EDF4-EDDC3B8BD15A}.wem"
+      "ShortName": "mus_arp_low_L2_01_A2.wav",
+      "CachePath": "20/{20A3813C-956E-3AFB-237F-9BDFE7E1DCD4}.wem"
      },
      {
-      "Id": "519696757",
+      "Id": "478037113",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L2_01.wav",
-      "CachePath": "04/{0484CEFB-23FB-F321-55D3-394A7EE5226B}.wem"
+      "ShortName": "mus_rythm_toms_L1_C.wav",
+      "CachePath": "80/{809B5D32-15B7-2371-E746-F5D432D1D4CA}.wem"
      },
      {
-      "Id": "524262190",
+      "Id": "489956537",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L1_03.wav",
-      "CachePath": "9C/{9CB6CAAA-A56D-A70A-6DFC-074D4DCA95C7}.wem"
+      "ShortName": "mus_arp_high_L2_01_A2.wav",
+      "CachePath": "4E/{4E0A0F72-734B-604C-3787-7EEEF35A87BB}.wem"
      },
      {
-      "Id": "546099412",
+      "Id": "511220098",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L3_05.wav",
-      "CachePath": "C2/{C22F88D1-72B2-8E9F-CDA3-42CD0D96B1D0}.wem"
+      "ShortName": "mus_arp_high_L3_01_A2.wav",
+      "CachePath": "BC/{BC803275-1F36-E593-A971-E19E1545136D}.wem"
      },
      {
-      "Id": "557727702",
+      "Id": "512115391",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L1_03.wav",
-      "CachePath": "16/{169E8959-371C-00D2-A04A-6CDACA3890DF}.wem"
+      "ShortName": "mus_rythm_toms_L2_G.wav",
+      "CachePath": "EF/{EFB08178-BED6-6FF9-3E61-A5CFBB396963}.wem"
      },
      {
-      "Id": "566106336",
+      "Id": "519636502",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_tonal_L1_08_loop.wav",
-      "CachePath": "E9/{E96A085D-5723-AA43-DA57-9DEA573E6FB0}.wem"
+      "ShortName": "mus_amb_tonal_L3_01_B_loop.wav",
+      "CachePath": "6C/{6C56354B-EA13-BCAF-04F8-E88CA47F2843}.wem"
      },
      {
-      "Id": "579313750",
+      "Id": "529253839",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L1_01.wav",
-      "CachePath": "AD/{AD282A7E-EFE1-5F7B-5A19-67DBC7AFFC8C}.wem"
+      "ShortName": "mus_arp_high_L1_01_C.wav",
+      "CachePath": "80/{80490B51-3305-8E32-855A-651D1D31911C}.wem"
      },
      {
-      "Id": "633498052",
+      "Id": "529877868",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L1_01.wav",
-      "CachePath": "6B/{6B7194DD-6ABB-694F-0960-962A7713BBA9}.wem"
+      "ShortName": "mus_arp_high_L3_01_G.wav",
+      "CachePath": "B3/{B32B188B-CEA2-0F89-C694-D64863415F41}.wem"
      },
      {
-      "Id": "679221048",
+      "Id": "539911223",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L2_02.wav",
-      "CachePath": "FB/{FB9FF523-F471-CEDD-D89D-9D52854852CD}.wem"
+      "ShortName": "mus_arp_mid_L1_01_G.wav",
+      "CachePath": "2E/{2EFA8743-5D0D-98DA-BA61-8B7ED229FA8C}.wem"
      },
      {
-      "Id": "704813737",
+      "Id": "552140806",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L3_04.wav",
-      "CachePath": "9A/{9ABCF83B-8B5E-D3B8-E927-864613291BF0}.wem"
+      "ShortName": "mus_arp_high_L2_01_D.wav",
+      "CachePath": "18/{18B1057C-7488-1CD8-ACEC-4ABBC096182F}.wem"
      },
      {
-      "Id": "715919542",
+      "Id": "557179157",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L2_01.wav",
-      "CachePath": "A1/{A1E8C8B2-8E1A-F9F2-9279-135652D2C303}.wem"
+      "ShortName": "mus_arp_low_L1_01_A1.wav",
+      "CachePath": "A3/{A365843E-5BDD-0345-3403-2BD8B6903D3C}.wem"
      },
      {
-      "Id": "735699166",
+      "Id": "560686024",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_bass_L1_03_loop.wav",
-      "CachePath": "89/{8987E415-3694-93CB-6155-3E5507FFD2A2}.wem"
+      "ShortName": "mus_rythm_hihats_L2_03.wav",
+      "CachePath": "42/{428FCC84-60E1-95E2-93B7-FABAEC429D54}.wem"
      },
      {
-      "Id": "746716572",
+      "Id": "567608178",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L2_03.wav",
-      "CachePath": "0F/{0F8A1638-53D9-65A9-8F6E-957B375A1781}.wem"
+      "ShortName": "mus_arp_low_L2_01_G.wav",
+      "CachePath": "D0/{D056EFD2-EE3A-DD71-6F26-B98504F425F1}.wem"
      },
      {
-      "Id": "761813568",
+      "Id": "574439120",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L1_02.wav",
-      "CachePath": "1F/{1F308B2F-2D00-DCB3-3636-6E18EF3A1E0C}.wem"
+      "ShortName": "mus_arp_high_L2_01_A1.wav",
+      "CachePath": "87/{87BFEC1D-4F88-179C-D984-FB9CB8EC77C8}.wem"
      },
      {
-      "Id": "764014273",
+      "Id": "583014136",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L1_04.wav",
-      "CachePath": "EE/{EE688CFA-7F61-E5A1-A3B6-9F1CEFFDAE31}.wem"
+      "ShortName": "mus_arp_mid_L1_01_C.wav",
+      "CachePath": "46/{46F1E52C-4F10-08A6-4F12-74690965CEEE}.wem"
      },
      {
-      "Id": "768724226",
+      "Id": "583714872",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L1_04.wav",
-      "CachePath": "55/{5592F678-CD2E-93F0-AE9A-36A8A89A4D30}.wem"
+      "ShortName": "mus_arp_low_L2_01_C.wav",
+      "CachePath": "6A/{6A3F5B20-3A37-F47D-35FC-3F1E460AD0F6}.wem"
      },
      {
-      "Id": "768727063",
+      "Id": "586252922",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L1_05.wav",
-      "CachePath": "F5/{F51CBF8B-86AE-F4CD-2577-8973C80F1289}.wem"
+      "ShortName": "mus_arp_low_L3_01_C.wav",
+      "CachePath": "1A/{1AB5FCA0-8089-FA76-D603-5996132E0A78}.wem"
      },
      {
-      "Id": "777739547",
+      "Id": "613997634",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_tonal_L1_07_loop.wav",
-      "CachePath": "53/{53C76CBA-1C2C-B513-351E-2E1FB1DE58AA}.wem"
+      "ShortName": "mus_rythm_kick_L2.wav",
+      "CachePath": "F0/{F0688394-5F95-DC40-D382-6F375BDE40E5}.wem"
+     },
+     {
+      "Id": "622267054",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_high_L3_01_D.wav",
+      "CachePath": "A3/{A341F277-3D25-9956-A435-78C31D1EDEA2}.wem"
+     },
+     {
+      "Id": "644074945",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_low_L3_01_G.wav",
+      "CachePath": "62/{625A4554-64B3-A330-6E9C-C86C84B7FFB0}.wem"
+     },
+     {
+      "Id": "651114915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_toms_L1_D.wav",
+      "CachePath": "98/{9822187D-0153-667E-DAD2-AADAA6043BF5}.wem"
+     },
+     {
+      "Id": "669888448",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_high_L1_01_A1.wav",
+      "CachePath": "6D/{6D58E947-857F-76A4-1A4C-C9DC71F442F0}.wem"
+     },
+     {
+      "Id": "682986115",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L2_01_D.wav",
+      "CachePath": "EB/{EB87655F-11CE-B3FE-D393-413A315F5DBB}.wem"
+     },
+     {
+      "Id": "698459311",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_toms_L1_E.wav",
+      "CachePath": "8E/{8EB11AB7-5331-25C4-B1A6-6CDAAEDC7505}.wem"
+     },
+     {
+      "Id": "702590821",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_toms_L3_G.wav",
+      "CachePath": "86/{863CF480-245C-6B6F-FDF0-E9B2AA5216A9}.wem"
+     },
+     {
+      "Id": "703512111",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_high_L1_01_G.wav",
+      "CachePath": "E5/{E5E70951-9728-00FA-683F-381F3A000030}.wem"
+     },
+     {
+      "Id": "752950533",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_high_L2_01_E.wav",
+      "CachePath": "80/{80936DE4-70E0-28EA-07F7-DC4CEFD0B338}.wem"
+     },
+     {
+      "Id": "759818898",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L2_01_E.wav",
+      "CachePath": "4B/{4B61D4E1-E875-91FA-558D-B40BB572B2A1}.wem"
+     },
+     {
+      "Id": "760319220",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L3_01_E.wav",
+      "CachePath": "8A/{8A4DD9F9-8049-8909-CE67-59223F17BB40}.wem"
+     },
+     {
+      "Id": "761277012",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_toms_L2_C.wav",
+      "CachePath": "81/{81132795-A60A-C67A-FFAB-1100D3DD5D44}.wem"
+     },
+     {
+      "Id": "766461908",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L2_01_A2.wav",
+      "CachePath": "AC/{ACEC8911-DA36-B910-E075-CB983298963D}.wem"
+     },
+     {
+      "Id": "767203964",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L2_01_C.wav",
+      "CachePath": "70/{70A4B865-EED5-400B-0CA8-0933AC62A422}.wem"
+     },
+     {
+      "Id": "767426802",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_kick_L3.wav",
+      "CachePath": "4E/{4E1EDD4C-5237-E315-CD2F-736B923AA244}.wem"
+     },
+     {
+      "Id": "777431835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_rythm_hihats_L3_02.wav",
+      "CachePath": "D8/{D8C79259-A91B-12D4-4C7E-771B5D51DF18}.wem"
      },
      {
       "Id": "806647403",
@@ -421,15 +645,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_amb_bass_L1_01_loop.wav",
-      "CachePath": "60/{6073B4FB-8C9F-963F-E09C-325C3B687601}.wem"
-     },
-     {
-      "Id": "813699888",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "mus_arp_high_L3_02.wav",
-      "CachePath": "88/{88A0C15A-0DA6-5F7C-0DD6-35000548E636}.wem"
+      "CachePath": "8D/{8D72E2BB-79A9-CFEC-36C4-4A9BFEA5DB0D}.wem"
      },
      {
       "Id": "826594434",
@@ -437,15 +653,23 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_rythm_hihats_L1_02.wav",
-      "CachePath": "D8/{D8AFA596-E75F-03BF-24D9-13892A77DDF8}.wem"
+      "CachePath": "2F/{2F12B645-18A5-1F89-1600-D9BD2984C37B}.wem"
      },
      {
-      "Id": "828466318",
+      "Id": "838607642",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_tonal_L1_02_loop.wav",
-      "CachePath": "CB/{CBB1FD03-F09F-EF27-5699-DC37828A9C6A}.wem"
+      "ShortName": "mus_rythm_hihats_L3_03.wav",
+      "CachePath": "61/{614173E2-3BDF-1411-328D-99FD78B97C65}.wem"
+     },
+     {
+      "Id": "848324849",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L2_01_A1.wav",
+      "CachePath": "C3/{C30377C7-DAD8-7677-50AF-C7B9C880CFB4}.wem"
      },
      {
       "Id": "848684103",
@@ -453,47 +677,87 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_rythm_kick_L1_01.wav",
-      "CachePath": "A4/{A45301C7-EE2E-1E17-52AD-9850CA17377F}.wem"
+      "CachePath": "C0/{C02FA906-B5C7-9D24-4583-FCD99097DA33}.wem"
      },
      {
-      "Id": "860334973",
+      "Id": "850891008",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L3_02.wav",
-      "CachePath": "02/{02A30D08-986A-AFB3-814F-2BEFC8225D9B}.wem"
+      "ShortName": "mus_rythm_hihats_L3_01.wav",
+      "CachePath": "50/{50FCF378-448E-4100-DE0C-6E97D16213EC}.wem"
      },
      {
-      "Id": "898782658",
+      "Id": "855463699",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L1_05.wav",
-      "CachePath": "26/{267B2F5D-5782-6468-CA98-B13970814BFD}.wem"
+      "ShortName": "mus_arp_mid_L3_01_G.wav",
+      "CachePath": "6D/{6D2A6E3E-6783-7E0F-7339-F8F0BFD26C6E}.wem"
      },
      {
-      "Id": "904047915",
+      "Id": "862415341",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L2_04.wav",
-      "CachePath": "AA/{AA493ED5-5E2C-89DA-80E3-C65D771F742F}.wem"
+      "ShortName": "mus_amb_tonal_L3_01_G_loop.wav",
+      "CachePath": "2E/{2E2D1E19-4C2F-4473-D0BB-0A86D0012881}.wem"
      },
      {
-      "Id": "937446298",
+      "Id": "872963753",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L1_01.wav",
-      "CachePath": "0A/{0AF129FE-682D-EBAA-5381-34E576B88A73}.wem"
+      "ShortName": "mus_rythm_hihats_L2_02.wav",
+      "CachePath": "5B/{5B52EFD0-6476-1174-B05C-FCC730BCD375}.wem"
      },
      {
-      "Id": "952602862",
+      "Id": "882150868",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_high_L2_01.wav",
-      "CachePath": "6C/{6C096605-A11A-0B6C-5A9E-8B0A58526B84}.wem"
+      "ShortName": "mus_amb_tonal_L2_01_B_loop.wav",
+      "CachePath": "1B/{1B1C82E9-67CC-78F8-DD99-E457571FE274}.wem"
+     },
+     {
+      "Id": "897890891",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_amb_tonal_L2_01_E_loop.wav",
+      "CachePath": "1E/{1E6E6229-0A31-8861-A6A8-7EE8C46DD6F3}.wem"
+     },
+     {
+      "Id": "899160687",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_high_L3_01_E.wav",
+      "CachePath": "4F/{4F50B260-5BC8-C272-F0F7-71ABCADD94F5}.wem"
+     },
+     {
+      "Id": "908604396",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_high_L2_01_G.wav",
+      "CachePath": "69/{69314153-92ED-A4B6-20FB-D90C9DD8D3DA}.wem"
+     },
+     {
+      "Id": "945906710",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_low_L1_01_C.wav",
+      "CachePath": "36/{36D951DC-A383-6171-5853-92E2705911ED}.wem"
+     },
+     {
+      "Id": "953155393",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_amb_tonal_L2_01_G_loop.wav",
+      "CachePath": "50/{50A9E437-9F5B-6EAC-110E-49DE316C677B}.wem"
      },
      {
       "Id": "962142809",
@@ -501,23 +765,31 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_amb_shimmer_L1_01_loop.wav",
-      "CachePath": "74/{74852D2C-6DDF-4BFB-2225-2E9DC9641C87}.wem"
+      "CachePath": "B0/{B018CF93-F983-C33C-3D7C-2C054B58BB9F}.wem"
      },
      {
-      "Id": "972031267",
+      "Id": "986216885",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_low_L3_03.wav",
-      "CachePath": "C2/{C20C07A8-A8F3-729A-B772-100381A6A098}.wem"
+      "ShortName": "mus_amb_bass_L3_01_loop.wav",
+      "CachePath": "0A/{0A8D175B-DD33-33A5-E705-799A41338451}.wem"
      },
      {
-      "Id": "1009884987",
+      "Id": "994517095",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L2_04.wav",
-      "CachePath": "F3/{F3FA2D8C-FED9-E71F-C17D-9A4A2A0F9FD1}.wem"
+      "ShortName": "mus_amb_shimmer_L2_01_loop.wav",
+      "CachePath": "DE/{DEE48143-9B9D-5271-3788-B9C71974F952}.wem"
+     },
+     {
+      "Id": "1010264569",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_amb_tonal_L3_01_A_loop.wav",
+      "CachePath": "DA/{DA6AE679-034C-B55F-E184-634F3A1AAC57}.wem"
      },
      {
       "Id": "1012463925",
@@ -525,7 +797,15 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_rythm_kick_L1_04.wav",
-      "CachePath": "E1/{E1A24B50-F8CA-6E4D-F027-DDB3F434929D}.wem"
+      "CachePath": "0C/{0CE5E013-B95F-156C-2087-85C8794C0294}.wem"
+     },
+     {
+      "Id": "1017287441",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_low_L1_01_D.wav",
+      "CachePath": "02/{02798F65-0D74-0A02-628A-16ABC312B48D}.wem"
      },
      {
       "Id": "1019216158",
@@ -533,23 +813,31 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_rythm_kick_L1_03.wav",
-      "CachePath": "B8/{B82D3AB0-30CB-BB48-A878-2B29BB144894}.wem"
+      "CachePath": "5D/{5D46355B-8460-6B05-A92D-09B77F86F472}.wem"
      },
      {
-      "Id": "1046558461",
+      "Id": "1051756433",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_amb_tonal_L1_01_loop.wav",
-      "CachePath": "51/{512AD2FA-E1E3-6635-0630-9D859039631B}.wem"
+      "ShortName": "mus_arp_high_L3_01_A1.wav",
+      "CachePath": "19/{198E8325-4F6B-2A1A-6000-86735FD0B226}.wem"
      },
      {
-      "Id": "1064440439",
+      "Id": "1052749630",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "mus_arp_mid_L3_05.wav",
-      "CachePath": "E2/{E21543C5-3916-7A78-73A7-DBA81336CA12}.wem"
+      "ShortName": "mus_arp_low_L2_01_E.wav",
+      "CachePath": "66/{66DA0242-FFDA-9474-2A03-6EF9486A784B}.wem"
+     },
+     {
+      "Id": "1065634766",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_arp_mid_L1_01_E.wav",
+      "CachePath": "8F/{8F6F9FF6-333C-EF2A-D099-D19735EBCAEE}.wem"
      }
     ],
     "Events": [
@@ -599,6 +887,44 @@
             "SwitchValue": {
              "GroupType": "Switch",
              "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "223792373"
+             },
+             {
+              "Id": "560686024"
+             },
+             {
+              "Id": "872963753"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "777431835"
+             },
+             {
+              "Id": "838607642"
+             },
+             {
+              "Id": "850891008"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
              "Id": "0",
              "GUID": "{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}"
             },
@@ -611,6 +937,116 @@
              },
              {
               "Id": "826594434"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3044745898",
+           "Id": "1182670505",
+           "GUID": "{E607F3B0-E5EC-4561-B5C7-BA5E7260222A}"
+          },
+          "Children": [
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "0",
+             "GUID": "{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "248415030"
+             },
+             {
+              "Id": "396938522"
+             },
+             {
+              "Id": "478037113"
+             },
+             {
+              "Id": "651114915"
+             },
+             {
+              "Id": "698459311"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "9919301"
+             },
+             {
+              "Id": "34486136"
+             },
+             {
+              "Id": "47678939"
+             },
+             {
+              "Id": "512115391"
+             },
+             {
+              "Id": "761277012"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304824",
+             "GUID": "{BE33DAAE-6C9B-4476-816A-0D0CC8FD3479}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "248415030"
+             },
+             {
+              "Id": "396938522"
+             },
+             {
+              "Id": "478037113"
+             },
+             {
+              "Id": "651114915"
+             },
+             {
+              "Id": "698459311"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "97216773"
+             },
+             {
+              "Id": "105853286"
+             },
+             {
+              "Id": "301063280"
+             },
+             {
+              "Id": "309076321"
+             },
+             {
+              "Id": "702590821"
              }
             ]
            }
@@ -640,6 +1076,44 @@
              },
              {
               "Id": "826594434"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "223792373"
+             },
+             {
+              "Id": "560686024"
+             },
+             {
+              "Id": "872963753"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "777431835"
+             },
+             {
+              "Id": "838607642"
+             },
+             {
+              "Id": "850891008"
              }
             ]
            },
@@ -701,6 +1175,19 @@
             "SwitchValue": {
              "GroupType": "Switch",
              "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "613997634"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
              "Id": "1702304824",
              "GUID": "{BE33DAAE-6C9B-4476-816A-0D0CC8FD3479}"
             },
@@ -719,6 +1206,19 @@
              },
              {
               "Id": "1019216158"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "767426802"
              }
             ]
            }
@@ -751,13 +1251,33 @@
             },
             "MediaRefs": [
              {
-              "Id": "106436164"
-             },
-             {
-              "Id": "502293123"
-             },
-             {
               "Id": "962142809"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "994517095"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "208289896"
              }
             ]
            },
@@ -769,12 +1289,6 @@
              "GUID": "{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}"
             },
             "MediaRefs": [
-             {
-              "Id": "106436164"
-             },
-             {
-              "Id": "502293123"
-             },
              {
               "Id": "962142809"
              }
@@ -794,18 +1308,38 @@
             "SwitchValue": {
              "GroupType": "Switch",
              "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "104957520"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
              "Id": "1702304824",
              "GUID": "{BE33DAAE-6C9B-4476-816A-0D0CC8FD3479}"
             },
             "MediaRefs": [
              {
-              "Id": "281592830"
-             },
-             {
-              "Id": "735699166"
-             },
-             {
               "Id": "806647403"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "986216885"
              }
             ]
            },
@@ -817,12 +1351,6 @@
              "GUID": "{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}"
             },
             "MediaRefs": [
-             {
-              "Id": "281592830"
-             },
-             {
-              "Id": "735699166"
-             },
              {
               "Id": "806647403"
              }
@@ -842,33 +1370,65 @@
             "SwitchValue": {
              "GroupType": "Switch",
              "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "359947245"
+             },
+             {
+              "Id": "882150868"
+             },
+             {
+              "Id": "897890891"
+             },
+             {
+              "Id": "953155393"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
              "Id": "1702304824",
              "GUID": "{BE33DAAE-6C9B-4476-816A-0D0CC8FD3479}"
             },
             "MediaRefs": [
              {
-              "Id": "266764240"
+              "Id": "201211705"
              },
              {
-              "Id": "377658914"
+              "Id": "224561897"
              },
              {
-              "Id": "396617998"
+              "Id": "316430871"
              },
              {
-              "Id": "415439674"
+              "Id": "423807509"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "139544716"
              },
              {
-              "Id": "566106336"
+              "Id": "519636502"
              },
              {
-              "Id": "777739547"
+              "Id": "862415341"
              },
              {
-              "Id": "828466318"
-             },
-             {
-              "Id": "1046558461"
+              "Id": "1010264569"
              }
             ]
            },
@@ -881,28 +1441,16 @@
             },
             "MediaRefs": [
              {
-              "Id": "266764240"
+              "Id": "201211705"
              },
              {
-              "Id": "377658914"
+              "Id": "224561897"
              },
              {
-              "Id": "396617998"
+              "Id": "316430871"
              },
              {
-              "Id": "415439674"
-             },
-             {
-              "Id": "566106336"
-             },
-             {
-              "Id": "777739547"
-             },
-             {
-              "Id": "828466318"
-             },
-             {
-              "Id": "1046558461"
+              "Id": "423807509"
              }
             ]
            }
@@ -925,13 +1473,33 @@
             },
             "MediaRefs": [
              {
-              "Id": "106436164"
-             },
-             {
-              "Id": "502293123"
-             },
-             {
               "Id": "962142809"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "994517095"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "208289896"
              }
             ]
            },
@@ -943,12 +1511,6 @@
              "GUID": "{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}"
             },
             "MediaRefs": [
-             {
-              "Id": "106436164"
-             },
-             {
-              "Id": "502293123"
-             },
              {
               "Id": "962142809"
              }
@@ -997,6 +1559,44 @@
             "SwitchValue": {
              "GroupType": "Switch",
              "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "223792373"
+             },
+             {
+              "Id": "560686024"
+             },
+             {
+              "Id": "872963753"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "777431835"
+             },
+             {
+              "Id": "838607642"
+             },
+             {
+              "Id": "850891008"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
              "Id": "0",
              "GUID": "{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}"
             },
@@ -1009,6 +1609,116 @@
              },
              {
               "Id": "826594434"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "3044745898",
+           "Id": "1182670505",
+           "GUID": "{E607F3B0-E5EC-4561-B5C7-BA5E7260222A}"
+          },
+          "Children": [
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "0",
+             "GUID": "{6DA2D0A1-056B-442A-BED9-FCE00E6DF46D}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "248415030"
+             },
+             {
+              "Id": "396938522"
+             },
+             {
+              "Id": "478037113"
+             },
+             {
+              "Id": "651114915"
+             },
+             {
+              "Id": "698459311"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "9919301"
+             },
+             {
+              "Id": "34486136"
+             },
+             {
+              "Id": "47678939"
+             },
+             {
+              "Id": "512115391"
+             },
+             {
+              "Id": "761277012"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304824",
+             "GUID": "{BE33DAAE-6C9B-4476-816A-0D0CC8FD3479}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "248415030"
+             },
+             {
+              "Id": "396938522"
+             },
+             {
+              "Id": "478037113"
+             },
+             {
+              "Id": "651114915"
+             },
+             {
+              "Id": "698459311"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "97216773"
+             },
+             {
+              "Id": "105853286"
+             },
+             {
+              "Id": "301063280"
+             },
+             {
+              "Id": "309076321"
+             },
+             {
+              "Id": "702590821"
              }
             ]
            }
@@ -1038,6 +1748,44 @@
              },
              {
               "Id": "826594434"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "223792373"
+             },
+             {
+              "Id": "560686024"
+             },
+             {
+              "Id": "872963753"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "777431835"
+             },
+             {
+              "Id": "838607642"
+             },
+             {
+              "Id": "850891008"
              }
             ]
            },
@@ -1099,6 +1847,19 @@
             "SwitchValue": {
              "GroupType": "Switch",
              "GroupId": "2177735725",
+             "Id": "1702304827",
+             "GUID": "{8B58C735-3B70-4CDB-ADEA-54C286D45A24}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "613997634"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
              "Id": "1702304824",
              "GUID": "{BE33DAAE-6C9B-4476-816A-0D0CC8FD3479}"
             },
@@ -1117,6 +1878,19 @@
              },
              {
               "Id": "1019216158"
+             }
+            ]
+           },
+           {
+            "SwitchValue": {
+             "GroupType": "Switch",
+             "GroupId": "2177735725",
+             "Id": "1702304826",
+             "GUID": "{3946F945-AE35-4490-B841-F63B101F6803}"
+            },
+            "MediaRefs": [
+             {
+              "Id": "767426802"
              }
             ]
            }
@@ -1149,19 +1923,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "50569044"
+              "Id": "51187793"
              },
              {
-              "Id": "65243380"
+              "Id": "83928472"
              },
              {
-              "Id": "519696757"
+              "Id": "460437983"
              },
              {
-              "Id": "679221048"
+              "Id": "567608178"
              },
              {
-              "Id": "904047915"
+              "Id": "583714872"
+             },
+             {
+              "Id": "1052749630"
              }
             ]
            },
@@ -1174,19 +1951,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "345278550"
+              "Id": "116271686"
              },
              {
-              "Id": "557727702"
+              "Id": "212214153"
              },
              {
-              "Id": "768724226"
+              "Id": "297424799"
              },
              {
-              "Id": "898782658"
+              "Id": "557179157"
              },
              {
-              "Id": "937446298"
+              "Id": "945906710"
+             },
+             {
+              "Id": "1017287441"
              }
             ]
            },
@@ -1199,19 +1979,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "108256500"
+              "Id": "16284772"
              },
              {
-              "Id": "126558413"
+              "Id": "87404568"
              },
              {
-              "Id": "395067114"
+              "Id": "282614588"
              },
              {
-              "Id": "546099412"
+              "Id": "439101670"
              },
              {
-              "Id": "972031267"
+              "Id": "586252922"
+             },
+             {
+              "Id": "644074945"
              }
             ]
            },
@@ -1224,19 +2007,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "345278550"
+              "Id": "116271686"
              },
              {
-              "Id": "557727702"
+              "Id": "212214153"
              },
              {
-              "Id": "768724226"
+              "Id": "297424799"
              },
              {
-              "Id": "898782658"
+              "Id": "557179157"
              },
              {
-              "Id": "937446298"
+              "Id": "945906710"
+             },
+             {
+              "Id": "1017287441"
              }
             ]
            }
@@ -1259,19 +2045,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "27426346"
+              "Id": "162091647"
              },
              {
-              "Id": "359316687"
+              "Id": "422935243"
              },
              {
-              "Id": "633498052"
+              "Id": "431203996"
              },
              {
-              "Id": "761813568"
+              "Id": "539911223"
              },
              {
-              "Id": "768727063"
+              "Id": "583014136"
+             },
+             {
+              "Id": "1065634766"
              }
             ]
            },
@@ -1284,19 +2073,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "245124806"
+              "Id": "55003208"
              },
              {
-              "Id": "308065907"
+              "Id": "164894965"
              },
              {
-              "Id": "704813737"
+              "Id": "170448900"
              },
              {
-              "Id": "860334973"
+              "Id": "386664547"
              },
              {
-              "Id": "1064440439"
+              "Id": "760319220"
+             },
+             {
+              "Id": "855463699"
              }
             ]
            },
@@ -1309,19 +2101,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "98447303"
+              "Id": "418658936"
              },
              {
-              "Id": "228902296"
+              "Id": "682986115"
              },
              {
-              "Id": "360585884"
+              "Id": "759818898"
              },
              {
-              "Id": "715919542"
+              "Id": "766461908"
              },
              {
-              "Id": "1009884987"
+              "Id": "767203964"
+             },
+             {
+              "Id": "848324849"
              }
             ]
            },
@@ -1334,19 +2129,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "27426346"
+              "Id": "162091647"
              },
              {
-              "Id": "359316687"
+              "Id": "422935243"
              },
              {
-              "Id": "633498052"
+              "Id": "431203996"
              },
              {
-              "Id": "761813568"
+              "Id": "539911223"
              },
              {
-              "Id": "768727063"
+              "Id": "583014136"
+             },
+             {
+              "Id": "1065634766"
              }
             ]
            }
@@ -1369,19 +2167,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "13511766"
+              "Id": "153820416"
              },
              {
-              "Id": "487778389"
+              "Id": "328220169"
              },
              {
-              "Id": "524262190"
+              "Id": "395294821"
              },
              {
-              "Id": "579313750"
+              "Id": "529253839"
              },
              {
-              "Id": "764014273"
+              "Id": "669888448"
+             },
+             {
+              "Id": "703512111"
              }
             ]
            },
@@ -1394,19 +2195,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "166469346"
+              "Id": "406487424"
              },
              {
-              "Id": "184372535"
+              "Id": "511220098"
              },
              {
-              "Id": "297074494"
+              "Id": "529877868"
              },
              {
-              "Id": "387070428"
+              "Id": "622267054"
              },
              {
-              "Id": "813699888"
+              "Id": "899160687"
+             },
+             {
+              "Id": "1051756433"
              }
             ]
            },
@@ -1419,19 +2223,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "248415313"
+              "Id": "95719797"
              },
              {
-              "Id": "368510496"
+              "Id": "489956537"
              },
              {
-              "Id": "495964861"
+              "Id": "552140806"
              },
              {
-              "Id": "746716572"
+              "Id": "574439120"
              },
              {
-              "Id": "952602862"
+              "Id": "752950533"
+             },
+             {
+              "Id": "908604396"
              }
             ]
            },
@@ -1444,19 +2251,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "13511766"
+              "Id": "153820416"
              },
              {
-              "Id": "487778389"
+              "Id": "328220169"
              },
              {
-              "Id": "524262190"
+              "Id": "395294821"
              },
              {
-              "Id": "579313750"
+              "Id": "529253839"
              },
              {
-              "Id": "764014273"
+              "Id": "669888448"
+             },
+             {
+              "Id": "703512111"
              }
             ]
            }
@@ -1479,19 +2289,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "13511766"
+              "Id": "153820416"
              },
              {
-              "Id": "487778389"
+              "Id": "328220169"
              },
              {
-              "Id": "524262190"
+              "Id": "395294821"
              },
              {
-              "Id": "579313750"
+              "Id": "529253839"
              },
              {
-              "Id": "764014273"
+              "Id": "669888448"
+             },
+             {
+              "Id": "703512111"
              }
             ]
            },
@@ -1504,19 +2317,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "166469346"
+              "Id": "406487424"
              },
              {
-              "Id": "184372535"
+              "Id": "511220098"
              },
              {
-              "Id": "297074494"
+              "Id": "529877868"
              },
              {
-              "Id": "387070428"
+              "Id": "622267054"
              },
              {
-              "Id": "813699888"
+              "Id": "899160687"
+             },
+             {
+              "Id": "1051756433"
              }
             ]
            },
@@ -1529,19 +2345,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "248415313"
+              "Id": "95719797"
              },
              {
-              "Id": "368510496"
+              "Id": "489956537"
              },
              {
-              "Id": "495964861"
+              "Id": "552140806"
              },
              {
-              "Id": "746716572"
+              "Id": "574439120"
              },
              {
-              "Id": "952602862"
+              "Id": "752950533"
+             },
+             {
+              "Id": "908604396"
              }
             ]
            },
@@ -1554,19 +2373,22 @@
             },
             "MediaRefs": [
              {
-              "Id": "13511766"
+              "Id": "153820416"
              },
              {
-              "Id": "487778389"
+              "Id": "328220169"
              },
              {
-              "Id": "524262190"
+              "Id": "395294821"
              },
              {
-              "Id": "579313750"
+              "Id": "529253839"
              },
              {
-              "Id": "764014273"
+              "Id": "669888448"
+             },
+             {
+              "Id": "703512111"
              }
             ]
            }
@@ -1676,6 +2498,6 @@
     ]
    }
   ],
-  "FileHash": "{F89FA5B5-7082-1B57-43C1-1932D397D87C}"
+  "FileHash": "{4B594F1C-396B-0A92-E9C1-8898FC75766C}"
  }
 }

@@ -17,6 +17,10 @@
 				<Event Name="Play_Bubble" ID="{5DACAFC1-ADCF-4AD4-A98C-6A1812D410EE}">
 					<ChildrenList>
 						<Action Name="" ID="{2DBE2303-70EB-4987-AFAC-F7AAF9AB5C02}" ShortID="119009545">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Music Group Switch" ID="{3AAB04BC-1DAF-411B-859F-9B22BCE07CF1}" WorkUnitID="{36EC59EB-371A-4F47-A2AE-8F75C2DFF83F}"/>
@@ -30,6 +34,8 @@
 						<Action Name="" ID="{FA992CB1-AE5F-461C-A77B-6A3EAA7B68B8}" ShortID="824184105">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
