@@ -159,7 +159,34 @@ public class Player : MonoBehaviour
         while (!token.IsCancellationRequested)
         {
             Bubble bubble = null;
-            var randomType = Random.Range(0, 2);
+
+            BubbleType bubbleTypes = BubbleType.Rythm;
+
+
+            if (Input.mouseScrollDelta.y > 0)
+            {
+                num--;
+
+            }
+            else if (Input.mouseScrollDelta.y < 0)
+            {
+                num++;
+
+            }
+
+
+            if (num > 0)
+            {
+                bubbleTypes = BubbleType.Rythm;
+            }
+            if (num > 33)
+            {
+                bubbleTypes = BubbleType.Amb;
+            }
+            if (num > 66)
+            {
+                bubbleTypes = BubbleType.Arp;
+            }
 
             if (!Input.GetKeyDown(KeyCode.Space))
             {
@@ -171,7 +198,7 @@ public class Player : MonoBehaviour
             float timer  = 0f;
 
             bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
-            bubble.Initialize((BubbleType)randomType);
+            bubble.Initialize((BubbleType)bubbleTypes);
 
             int size = 1;
             bubble.SetScale(size);
@@ -179,12 +206,12 @@ public class Player : MonoBehaviour
             {
                 timer += Time.deltaTime;
 
-                if (timer >= 4)
+                if (timer >= 2)
                 {
                     bubble.SetScale(3);
                     break;
                 }
-                else if (timer >= 2)
+                else if (timer >= 1)
                     bubble.SetScale(2);
                 
                 await UniTask.Yield(token);
