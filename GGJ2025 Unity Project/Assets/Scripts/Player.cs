@@ -174,26 +174,28 @@ public class Player : MonoBehaviour
             bubble.Initialize((BubbleType)randomType);
 
             int size = 1;
+            bubble.SetScale(size);
             while (Input.GetKey(KeyCode.Space)&&!token.IsCancellationRequested)
             {
                 timer += Time.deltaTime;
 
-                if (timer >= 2)
-                    bubble.SetScale(2);
-                else if (timer >= 3)
+                if (timer >= 4)
                 {
                     bubble.SetScale(3);
                     break;
                 }
+                else if (timer >= 2)
+                    bubble.SetScale(2);
+                
                 await UniTask.Yield(token);
             }
 
             var angle = Random.Range(0, 360);
             angle = angle % 90;
 
+            bubble._speed = 5.0f;
             dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
             bubble.Shoot(dir);
-            bubble._speed = 5.0f;
 
         }
     }
