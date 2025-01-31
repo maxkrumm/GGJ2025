@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class TImer : MonoBehaviour
 {
     [SerializeField] Text TimerText;
-    public float limitTime = 30;
+    public float limitTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

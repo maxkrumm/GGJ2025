@@ -7,7 +7,7 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     public int Count => count;
-    [SerializeField] private int count;
+    [SerializeField]private int count;
     [SerializeField]private PlayerBubbleClicker bubbleClicker;
     [SerializeField]private Player player;
 

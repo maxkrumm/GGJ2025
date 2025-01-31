@@ -15,9 +15,6 @@ public class TitleManager : MonoBehaviour
     void Update()
     {
         discImage.rectTransform.Rotate(new Vector3(0, 0, 1) * speed);
-        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space)){
-            OnClicked();
-        }
     }
 
     public void OnClicked()

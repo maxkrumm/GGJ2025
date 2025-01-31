@@ -1,230 +1,132 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using System.Diagnostics.CodeAnalysis;
-
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoint;
-    [SerializeField] Bubble _bubulePrefab;
+    [SerializeField] private Bubble _bubulePrefab;
     public GameObject meter;
     private int limitcreate;
-    public int num;
-   public int push_count;
-   public float timeleft;
-    public int bubblesize=1;
-    const int Max=99;
+    public int num = 7;
+    public int push_count;
+    public float timeleft;
+    public int bubblesize = 1;
+    const int Max = 15;
     const int Min = 0;
     bool changeRotate;
     float rotate;
     float angle;
     Vector2 dir;
     Bubble bubblecs = new Bubble();
-    
+    public GameObject bottles;
 
     private List<Bubble> chargedBubbles = new List<Bubble>();
-
+    private CancellationTokenSource _cancellationTokenSource;
+    private bool _isRunning; // Prevent multiple Init() loops
+    private BubbleType _previousBubbleType; // Store last bubble type
 
     private void Start()
     {
-        Init(this.GetCancellationTokenOnDestroy()).Forget();
+        _previousBubbleType = BubbleType.Rythm; // Initialize with default
+        StartInitLoop();
     }
 
-    void Meter()
+    private void StartInitLoop()
     {
-        if(0.1f>=meter.transform.eulerAngles.x)
-        {
-            changeRotate = true;
-        }
-        if(90<=meter.transform.eulerAngles.x)
-        {
-            changeRotate = false;
-        }
+        if (_isRunning) return; // Prevent multiple loops
 
-        if(changeRotate)
-        {
-            rotate = 1;
-        }
-        else
-        {
-            rotate = -1;
-        }
-        //meter.transform.Rotate(0,0,rotate);
-        angle = (angle + 1) % 90;
-        dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-        //Debug.Log(dir);
+        _cancellationTokenSource = new CancellationTokenSource();
+        _isRunning = true;
+        Init(_cancellationTokenSource.Token).Forget();
     }
-
- 
-    // Update is called once per frame
-    void Update1()
-    {
-        Meter();
-    
-        if (Input.mouseScrollDelta.y > 0)
-        {
-            num--;
-          
-        }
-        else if (Input.mouseScrollDelta.y<0)
-        {
-            num++;
-           
-        }
-
-        BubbleType bubbleTypes= BubbleType.Rythm;
-
-        if (num > 0)
-        {
-             bubbleTypes = BubbleType.Rythm;
-        }
-        if (num > 33)
-        {
-             bubbleTypes = BubbleType.Amb;
-        }
-        if (num > 66)
-        {
-             bubbleTypes = BubbleType.Arp;
-        }
-        if(push_count < 3)
-        {
-            bubblesize = 1;
-        }
-        
-        if (push_count >= 3)
-        {
-            bubblesize = 2;
-        }
-        if (push_count >= 5)
-        {
-            bubblesize = 3;
-        }
-      
-      
-        //if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    var bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
-        //    bubble.Initialize(bubbleTypes, bubblesize, dir);
-        //    chargedBubbles.Add(bubble);
-        //}
-        //else if  (Input.GetKey(KeyCode.Space))
-        //{
-        //    timeleft -= Time.deltaTime;
-        //    if (timeleft <= 0)
-        //    {
-        //        timeleft = 0.75f;
-        //        push_count++;
-
-
-        //    }
-        //    foreach (var bubble in chargedBubbles)
-        //    {
-        //        bubble.SetScale(bubblesize);
-        //    }
-
-        //}
-        //else if(Input.GetKeyUp(KeyCode.Space))
-        //{
-        //    foreach(var bubble in chargedBubbles)
-        //    {
-        //        bubble._speed = 0;
-                
-        //    }
-        //    chargedBubbles.Clear();
-        //    push_count = 0;
-        //    bubblesize = 1;
-        //    limitcreate=0;
-        //}
-       
-        //Debug.Log(push_count);
-        //Debug.Log(num);
-        //Debug.Log(bubbleTypes);
-        if (num <= Min)
-        {
-            num = Min;
-        }
-
-        if (num > Max)
-        {
-            num=Max;
-        }
-    }
-
 
     private async UniTask Init(CancellationToken token)
     {
-        while (!token.IsCancellationRequested)
+        try
         {
-            Bubble bubble = null;
-
-            BubbleType bubbleTypes = BubbleType.Rythm;
-
-
-            if (Input.mouseScrollDelta.y > 0)
+            while (!token.IsCancellationRequested)
             {
-                num--;
+                if (!this.enabled || !gameObject.activeSelf || token.IsCancellationRequested) break;
 
-            }
-            else if (Input.mouseScrollDelta.y < 0)
-            {
-                num++;
+                Bubble bubble = null;
+                BubbleType bubbleTypes = BubbleType.Rythm;
 
-            }
+                if (Input.mouseScrollDelta.y > 0) num--;
+                else if (Input.mouseScrollDelta.y < 0) num++;
 
+                num = Mathf.Clamp(num, Min, Max);
 
-            if (num > 0)
-            {
-                bubbleTypes = BubbleType.Rythm;
-            }
-            if (num > 33)
-            {
-                bubbleTypes = BubbleType.Amb;
-            }
-            if (num > 66)
-            {
-                bubbleTypes = BubbleType.Arp;
-            }
-
-            if (!Input.GetKeyDown(KeyCode.Space))
-            {
-
-                await UniTask.Yield(token);
-                continue;
-            }
-
-            float timer  = 0f;
-
-            bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
-            bubble.Initialize((BubbleType)bubbleTypes);
-
-            int size = 1;
-            bubble.SetScale(size);
-            while (Input.GetKey(KeyCode.Space)&&!token.IsCancellationRequested)
-            {
-                timer += Time.deltaTime;
-
-                if (timer >= 2)
+                if (num >= 0) 
                 {
-                    bubble.SetScale(3);
-                    break;
+                    bubbleTypes = BubbleType.Amb;
+                    bottles.transform.rotation = Quaternion.Euler(0, 0, -40);
                 }
-                else if (timer >= 1)
-                    bubble.SetScale(2);
-                
-                await UniTask.Yield(token);
+                if (num >= 5) 
+                {
+                    bubbleTypes = BubbleType.Rythm;
+                    bottles.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                if (num >= 10) 
+                {
+                    bubbleTypes = BubbleType.Arp;
+                    bottles.transform.rotation = Quaternion.Euler(0, 0, 40);
+                }
+
+                // ✅ Only trigger Play_Switch when the bubble type changes
+                if (bubbleTypes != _previousBubbleType)
+                {
+                    AkSoundEngine.PostEvent("Play_Switch", gameObject);
+                    _previousBubbleType = bubbleTypes; // Update previous state
+                }
+
+                if (!Input.GetKeyDown(KeyCode.Space))
+                {
+                    await UniTask.Yield(token);
+                    continue;
+                }
+
+                float timer = 0f;
+                bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
+                bubble.Initialize(bubbleTypes);
+
+                int size = 1;
+                bubble.SetScale(size);
+
+                while (Input.GetKey(KeyCode.Space) && !token.IsCancellationRequested)
+                {
+                    timer += Time.deltaTime;
+
+                    if (timer >= 2) 
+                    {
+                        bubble.SetScale(3);
+                        break;
+                    }
+                    else if (timer >= 1) 
+                    {
+                        bubble.SetScale(2);
+                    }
+
+                    await UniTask.Yield(token);
+                }
+
+                var angle = Random.Range(0, 360) % 90;
+                bubble._speed = 5.0f;
+                dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+                bubble.Shoot(dir);
             }
-
-            var angle = Random.Range(0, 360);
-            angle = angle % 90;
-
-            bubble._speed = 5.0f;
-            dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-            bubble.Shoot(dir);
-
+        }
+        finally
+        {
+            _isRunning = false; // Reset flag when exiting the loop
         }
     }
-   
+
+    private void OnDisable()
+    {
+        _cancellationTokenSource?.Cancel();
+        _cancellationTokenSource?.Dispose();
+        _isRunning = false; // Allow Init() to restart if needed
+    }
 }

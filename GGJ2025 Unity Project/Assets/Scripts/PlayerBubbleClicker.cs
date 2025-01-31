@@ -5,7 +5,7 @@ public class PlayerBubbleClicker : MonoBehaviour
     [SerializeField] LayerMask layerMask;
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // ¶ƒNƒŠƒbƒN‚ğŒŸo
+        if (Input.GetMouseButtonDown(0)) // ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½o
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
@@ -17,7 +17,7 @@ public class PlayerBubbleClicker : MonoBehaviour
             if (bubble.IsOverlap)
                 bubble.BlendBubbles();
             else
-                bubble.BreakBubble();   
+                bubble.BreakBubble();  
             
         }
     }

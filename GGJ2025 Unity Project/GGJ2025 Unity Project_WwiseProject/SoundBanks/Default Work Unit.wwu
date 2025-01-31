@@ -12,6 +12,21 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="SFX" ID="{98534698-73B9-40C7-9F94-0451011D82BE}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Switch" ID="{E4EE031B-5C4C-427C-81A3-FD8FB2632C00}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Play" ID="{FBB44AAE-163A-4634-81A9-5C33DC29298F}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Grow" ID="{B8D0BCC7-1B25-479A-95C6-2C2D1E504F7E}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Pop" ID="{EC1EEF34-A598-4829-A01A-1F990AD2CCC0}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Vinyl" ID="{87CED1EC-6CA8-4B1F-A01B-5D801AE9C60E}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Spawn" ID="{2A902C4E-6B3B-4B4F-9B7D-230A3038B7F4}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Join" ID="{380C2E28-AD20-4D5D-ABC4-41A0D852CB62}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Grow" ID="{9A314116-B61A-4E40-98AF-B8BBD0942377}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Home" ID="{5C0600E7-DE08-4EC0-9ED6-9B3FF952B870}" WorkUnitID="{AC9B0C85-65BF-4436-B69D-CCBDEAD05D62}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

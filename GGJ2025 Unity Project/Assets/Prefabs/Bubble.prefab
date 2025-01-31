@@ -172,9 +172,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b705284073dd18348ae427ab1d16f5d8, type: 2}
   - {fileID: 11400000, guid: 4dcb7704145be7741995a0ac3d942735, type: 2}
   - {fileID: 11400000, guid: e017bed561a7cc0468d141bf485506f4, type: 2}
-  _defaultSpeed: 9
+  _defaultSpeed: 3.5
   _overlapedSpeed: 0.5
-  _sizeMultiplay: 1.5
+  _sizeMultiplay: 1.2
   IsOverlapAction: 1
   _speed: 0
   _overlapBubble: {fileID: 0}

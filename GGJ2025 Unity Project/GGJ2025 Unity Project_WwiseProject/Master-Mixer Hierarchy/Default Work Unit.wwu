@@ -4,11 +4,38 @@
 		<WorkUnit Name="Default Work Unit" ID="{52FC981E-3F67-450B-B911-BF032E645674}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{89AB04EF-1A95-4CD2-81F8-60B2B796807F}" WorkUnitID="{EE625E25-789A-4C2B-BC89-F561CCE66B9F}"/>
 						</Reference>
 					</ReferenceList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{79C15639-5F3D-4457-AEEB-C40F3EE94AE1}" ShortID="338987080">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+												<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

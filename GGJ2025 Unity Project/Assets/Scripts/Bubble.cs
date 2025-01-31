@@ -70,7 +70,9 @@ public class Bubble : MonoBehaviour
         var setting = _settings.FirstOrDefault(x => x.type == type);
         _spriteRenderer.color = setting.colors[level - 1];
 
-               
+        if(!IsOverlap)
+        AkSoundEngine.PostEvent("Play_Grow", gameObject);  
+
         BackGroundManager.Instance.Add(this);
 
     }
@@ -78,16 +80,27 @@ public class Bubble : MonoBehaviour
     public void SetScale(int size)
     {
         this.size = size;
-        transform.localScale = new Vector2(size, size) * _sizeMultiplay;
+
+        // Apply a smaller difference between sizes
+        float adjustedSize = 1 + (size - 1) * 0.35f; // Scale size differences (1 -> 1, 2 -> 1.5, 3 -> 2)
+
+        transform.localScale = new Vector2(adjustedSize, adjustedSize) * _sizeMultiplay;
     }
 
-    public void Shoot(Vector2 dir)
+
+    public void Shoot(Vector2 dir, bool isBlend = false)
     {
         Dir = dir;
 
         BubbleAudioPlayer bubbleAudioPlayer = gameObject.GetComponent<BubbleAudioPlayer>();
         bubbleAudioPlayer.QueueSound();
         bubbleAudioPlayer.PlaySound();
+        AkSoundEngine.PostEvent("Stop_Grow", gameObject);
+
+        if(isBlend)
+        AkSoundEngine.PostEvent("Play_Join", gameObject);
+        else
+        AkSoundEngine.PostEvent("Play_Spawn", gameObject);
 
         Debug.Log("BUBBLE: " + Type + "  Size " + size + "  Level " + level);
 
@@ -118,6 +131,7 @@ public class Bubble : MonoBehaviour
     /// </summary>
     public void BreakBubble()
     {
+        AkSoundEngine.PostEvent("Play_Pop", gameObject);
         _animator.SetTrigger("Break");
         Destroy(gameObject, 0.5f);
     }
@@ -135,7 +149,7 @@ public class Bubble : MonoBehaviour
         bubule.transform.position = transform.position;
         bubule.Initialize(Type);
         bubule.SetScale(size);
-        bubule.Shoot(Dir);
+        bubule.Shoot(Dir, true);
 
         Destroy(this.gameObject, 0.1f);
         Destroy(_overlapBubble.gameObject, 0.1f);

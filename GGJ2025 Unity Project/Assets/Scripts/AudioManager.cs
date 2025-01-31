@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         StartMusic();
+        AkSoundEngine.PostEvent("Play_Vinyl", gameObject);
     }
 
     private void StartMusic()
@@ -66,6 +67,16 @@ public class AudioManager : MonoBehaviour
     void OnDestroy()
     {
        
+    }
+
+    public void OnButtonPlay()
+    {
+        AkSoundEngine.PostEvent("Play_Play", gameObject);
+    }
+
+    public void OnButtonHome()
+    {
+        AkSoundEngine.PostEvent("Play_Home", gameObject);
     }
 
     

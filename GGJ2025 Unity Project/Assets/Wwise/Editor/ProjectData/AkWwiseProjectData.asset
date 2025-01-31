@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 1e98fc52673f0b45b911bf032e645674
     GuidInternal: 
-    m_lastTime: -8584638743842483531
+    m_lastTime: -8584632859014575804
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 8bbaac268e7d0848bec1c6295eb9ce24
     GuidInternal: 
-    m_lastTime: -8584637822429529698
+    m_lastTime: -8584632845614695809
     List:
     - name: Music
       guid: e82d704d92289f4cadd349d83cfbbdb0
@@ -82,6 +82,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: e82d704d92289f4cadd349d83cfbbdb0
       Path: SoundBanks\Default Work Unit\Music
+    - name: SFX
+      guid: 98465398b973c7409f940451011d82be
+      id: 393239870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8bbaac268e7d0848bec1c6295eb9ce24
+      - ElementName: SFX
+        ObjectType: 7
+        guid: 98465398b973c7409f940451011d82be
+      Path: SoundBanks\Default Work Unit\SFX
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 850c9bacbf653644b69dccbdead05d62
     GuidInternal: 
-    m_lastTime: -8584637391790596753
+    m_lastTime: -8584632832397628456
     List:
     - name: Play_Bubble
       guid: c1afac5dcfadd44aa98c6a1812d410ee
@@ -113,6 +127,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Grow
+      guid: c7bcd0b8251b9a4795c62c2d1e504f7e
+      id: 185497427
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Grow
+        ObjectType: 3
+        guid: c7bcd0b8251b9a4795c62c2d1e504f7e
+      Path: Events\Default Work Unit\Play_Grow
+      maxAttenuation: 0
+      maxDuration: 4
+      minDuration: 4
+    - name: Play_Home
+      guid: e700065c08dec04e9ed69b3ff952b870
+      id: 2503249763
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Home
+        ObjectType: 3
+        guid: e700065c08dec04e9ed69b3ff952b870
+      Path: Events\Default Work Unit\Play_Home
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
+    - name: Play_Join
+      guid: 282e0c3820ad5d4dabc441a0d852cb62
+      id: 3022259126
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Join
+        ObjectType: 3
+        guid: 282e0c3820ad5d4dabc441a0d852cb62
+      Path: Events\Default Work Unit\Play_Join
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
     - name: Play_Music_Sync
       guid: 631f037194fb5543aa062bd00dfbcd3e
       id: 670227703
@@ -130,6 +195,91 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Play
+      guid: ae4ab4fb3a16344681a95c33dc29298f
+      id: 2189502264
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Play
+        ObjectType: 3
+        guid: ae4ab4fb3a16344681a95c33dc29298f
+      Path: Events\Default Work Unit\Play_Play
+      maxAttenuation: 0
+      maxDuration: 3.1969376
+      minDuration: 3.1969376
+    - name: Play_Pop
+      guid: 34ef1eec98a52948a01a1f990ad2ccc0
+      id: 2990278359
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Pop
+        ObjectType: 3
+        guid: 34ef1eec98a52948a01a1f990ad2ccc0
+      Path: Events\Default Work Unit\Play_Pop
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: Play_Spawn
+      guid: 4e2c902a3b6b4f4b9b7d230a3038b7f4
+      id: 1012143543
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Spawn
+        ObjectType: 3
+        guid: 4e2c902a3b6b4f4b9b7d230a3038b7f4
+      Path: Events\Default Work Unit\Play_Spawn
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
+    - name: Play_Switch
+      guid: 1b03eee44c5c7c4281a3fd8fb2632c00
+      id: 81759402
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Switch
+        ObjectType: 3
+        guid: 1b03eee44c5c7c4281a3fd8fb2632c00
+      Path: Events\Default Work Unit\Play_Switch
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: Play_Vinyl
+      guid: ecd1ce87a86c1f4ba01b5d801ae9c60e
+      id: 3186214750
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Play_Vinyl
+        ObjectType: 3
+        guid: ecd1ce87a86c1f4ba01b5d801ae9c60e
+      Path: Events\Default Work Unit\Play_Vinyl
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Bubble
       guid: 6d0f40acd8095643bbddff243d505ff3
       id: 1331642754
@@ -144,6 +294,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6d0f40acd8095643bbddff243d505ff3
       Path: Events\Default Work Unit\Stop_Bubble
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Grow
+      guid: 1641319a1ab6404e98afb8bbd0942377
+      id: 242051745
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 850c9bacbf653644b69dccbdead05d62
+      - ElementName: Stop_Grow
+        ObjectType: 3
+        guid: 1641319a1ab6404e98afb8bbd0942377
+      Path: Events\Default Work Unit\Stop_Grow
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -402,7 +569,7 @@ MonoBehaviour:
     m_lastTime: -8584638743841098298
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000a0000000b0000003700000038000000
+  ExpandedWaapiItemIds: 0100000005000000060000000a0000000b0000003700000038000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -1,0 +1,561 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "393239870",
+    "Type": "User",
+    "GUID": "{98534698-73B9-40C7-9F94-0451011D82BE}",
+    "Language": "SFX",
+    "Hash": "{19E597EB-233F-93C9-55DD-01B8F2225962}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
+    "ShortName": "SFX",
+    "Path": "SFX.bnk",
+    "Media": [
+     {
+      "Id": "77640389",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_big_03.wav",
+      "CachePath": "1A/{1A84931F-EF3F-EF4B-2B23-5A6695345AA4}.wem"
+     },
+     {
+      "Id": "183818852",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_mid_01.wav",
+      "CachePath": "A0/{A0ED042D-3758-0588-8E84-F8693A4B88C7}.wem"
+     },
+     {
+      "Id": "196482425",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_big_02.wav",
+      "CachePath": "CC/{CC51568C-0D42-AD8A-BAAF-1AB6FDC30DF4}.wem"
+     },
+     {
+      "Id": "211623838",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_grow.wav",
+      "CachePath": "1A/{1AD2C615-06C3-4357-96C6-03523D576144}.wem"
+     },
+     {
+      "Id": "234317664",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_switch_03.wav",
+      "CachePath": "04/{0459414B-91DC-2EE1-2F90-3F26121AE6BE}.wem"
+     },
+     {
+      "Id": "241539878",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_pop_01.wav",
+      "CachePath": "59/{5978CDFC-9B42-F663-7290-4895B6BA68AE}.wem"
+     },
+     {
+      "Id": "249087336",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_mid_03.wav",
+      "CachePath": "BC/{BC2257B4-5B23-5193-BED9-E1851FEAEA96}.wem"
+     },
+     {
+      "Id": "267451819",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_mid_01.wav",
+      "CachePath": "B9/{B9EDC5FF-6639-A12C-F95F-5B64186B713C}.wem"
+     },
+     {
+      "Id": "304428105",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_mid_04.wav",
+      "CachePath": "83/{83157916-3643-58F7-99E6-F92576BD2D10}.wem"
+     },
+     {
+      "Id": "329457575",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_mid_04.wav",
+      "CachePath": "9E/{9E8D25A4-138D-57FD-2AC6-C58CD18C274C}.wem"
+     },
+     {
+      "Id": "361745353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_small_03.wav",
+      "CachePath": "EF/{EF96479A-E99B-5A6A-5096-088760190501}.wem"
+     },
+     {
+      "Id": "364260200",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_vinyl_loop.wav",
+      "CachePath": "D1/{D1A9631B-7132-DB36-FB66-D2C6E0B88332}.wem"
+     },
+     {
+      "Id": "406673544",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_small_05.wav",
+      "CachePath": "A2/{A2E0CA1F-FBE8-4B70-FDAD-09762EB2B063}.wem"
+     },
+     {
+      "Id": "451180298",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_small_03.wav",
+      "CachePath": "F6/{F62733F2-3ED5-B2B8-F620-BD9A77DBC9D1}.wem"
+     },
+     {
+      "Id": "517492878",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_mid_03.wav",
+      "CachePath": "A1/{A1D5B9F0-321F-D8B1-379A-C4E218EFEC5B}.wem"
+     },
+     {
+      "Id": "616497883",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_small_02.wav",
+      "CachePath": "72/{721F49B4-BCA5-97CC-471F-AB4C0B56286F}.wem"
+     },
+     {
+      "Id": "632372728",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_pop_02.wav",
+      "CachePath": "90/{908BC880-4271-BDA5-F24D-1F9C45C737DD}.wem"
+     },
+     {
+      "Id": "663302676",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_small_01.wav",
+      "CachePath": "3A/{3A093A91-3EFE-DD4A-6142-6D724E1E535B}.wem"
+     },
+     {
+      "Id": "684187507",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_button_home.wav",
+      "CachePath": "99/{99E9AF3F-2371-F87F-BED0-170E028C1CEE}.wem"
+     },
+     {
+      "Id": "693147649",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_small_05.wav",
+      "CachePath": "20/{2011DA02-4D85-B709-98F9-330E9AFD74A8}.wem"
+     },
+     {
+      "Id": "747644532",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_mid_02.wav",
+      "CachePath": "43/{4355E987-489F-9341-EF09-0A329F796584}.wem"
+     },
+     {
+      "Id": "751253386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_small_04.wav",
+      "CachePath": "E5/{E596CF0B-2F51-1B32-47CD-66B0D269AF11}.wem"
+     },
+     {
+      "Id": "753220477",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_small_02.wav",
+      "CachePath": "2E/{2E97FDF4-573E-D81D-F127-B8D6EF23EF06}.wem"
+     },
+     {
+      "Id": "755098366",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_mid_02.wav",
+      "CachePath": "AE/{AE4C5801-679D-AD37-2C56-4870CDD85C04}.wem"
+     },
+     {
+      "Id": "783473555",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_switch_01.wav",
+      "CachePath": "04/{04007D29-A8C3-E3DE-A8D5-1928D787EE77}.wem"
+     },
+     {
+      "Id": "799867026",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_pop_03.wav",
+      "CachePath": "4E/{4EEA953C-4D88-D83F-60EF-B4D44528EAF5}.wem"
+     },
+     {
+      "Id": "866671331",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_spawn_big_01.wav",
+      "CachePath": "B3/{B3283CAF-6384-655E-410B-856F45CC0320}.wem"
+     },
+     {
+      "Id": "868693233",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_button_play.wav",
+      "CachePath": "B3/{B3661A77-B911-2F1C-9527-3663D995DB76}.wem"
+     },
+     {
+      "Id": "880126582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_small_01.wav",
+      "CachePath": "F3/{F3D4263B-19BE-BADC-45D7-464DB1074123}.wem"
+     },
+     {
+      "Id": "992350466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_switch_02.wav",
+      "CachePath": "87/{879EFBEF-9239-1197-36E3-C69D7094055A}.wem"
+     },
+     {
+      "Id": "1024396314",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_join_small_04.wav",
+      "CachePath": "5C/{5C10246B-3372-6F8D-A131-595856C17BB5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "185497427",
+      "Name": "Play_Grow",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Grow",
+      "GUID": "{B8D0BCC7-1B25-479A-95C6-2C2D1E504F7E}",
+      "DurationType": "OneShot",
+      "DurationMin": "4",
+      "DurationMax": "4",
+      "MediaRefs": [
+       {
+        "Id": "211623838"
+       }
+      ]
+     },
+     {
+      "Id": "2503249763",
+      "Name": "Play_Home",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Home",
+      "GUID": "{5C0600E7-DE08-4EC0-9ED6-9B3FF952B870}",
+      "DurationType": "OneShot",
+      "DurationMin": "3",
+      "DurationMax": "3",
+      "MediaRefs": [
+       {
+        "Id": "684187507"
+       }
+      ]
+     },
+     {
+      "Id": "3022259126",
+      "Name": "Play_Join",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Join",
+      "GUID": "{380C2E28-AD20-4D5D-ABC4-41A0D852CB62}",
+      "DurationType": "OneShot",
+      "DurationMin": "3",
+      "DurationMax": "3",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3044745898",
+         "Id": "647611021",
+         "GUID": "{22AF3F2C-C4BC-4068-AD1E-81D8AECEEB41}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "77640389"
+         },
+         {
+          "Id": "196482425"
+         },
+         {
+          "Id": "866671331"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3044745898",
+         "Id": "1182670505",
+         "GUID": "{E607F3B0-E5EC-4561-B5C7-BA5E7260222A}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "267451819"
+         },
+         {
+          "Id": "304428105"
+         },
+         {
+          "Id": "517492878"
+         },
+         {
+          "Id": "755098366"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3044745898",
+         "Id": "1846755610",
+         "GUID": "{774B06F2-24DC-40F8-932F-F0283C869DD7}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "361745353"
+         },
+         {
+          "Id": "616497883"
+         },
+         {
+          "Id": "693147649"
+         },
+         {
+          "Id": "880126582"
+         },
+         {
+          "Id": "1024396314"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "2189502264",
+      "Name": "Play_Play",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Play",
+      "GUID": "{FBB44AAE-163A-4634-81A9-5C33DC29298F}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.1969376",
+      "DurationMax": "3.1969376",
+      "MediaRefs": [
+       {
+        "Id": "868693233"
+       }
+      ]
+     },
+     {
+      "Id": "2990278359",
+      "Name": "Play_Pop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Pop",
+      "GUID": "{EC1EEF34-A598-4829-A01A-1F990AD2CCC0}",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "241539878"
+       },
+       {
+        "Id": "632372728"
+       },
+       {
+        "Id": "799867026"
+       }
+      ]
+     },
+     {
+      "Id": "1012143543",
+      "Name": "Play_Spawn",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Spawn",
+      "GUID": "{2A902C4E-6B3B-4B4F-9B7D-230A3038B7F4}",
+      "DurationType": "OneShot",
+      "DurationMin": "3",
+      "DurationMax": "3",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3044745898",
+         "Id": "647611021",
+         "GUID": "{22AF3F2C-C4BC-4068-AD1E-81D8AECEEB41}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "77640389"
+         },
+         {
+          "Id": "196482425"
+         },
+         {
+          "Id": "866671331"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3044745898",
+         "Id": "1182670505",
+         "GUID": "{E607F3B0-E5EC-4561-B5C7-BA5E7260222A}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "183818852"
+         },
+         {
+          "Id": "249087336"
+         },
+         {
+          "Id": "329457575"
+         },
+         {
+          "Id": "747644532"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3044745898",
+         "Id": "1846755610",
+         "GUID": "{774B06F2-24DC-40F8-932F-F0283C869DD7}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "406673544"
+         },
+         {
+          "Id": "451180298"
+         },
+         {
+          "Id": "663302676"
+         },
+         {
+          "Id": "751253386"
+         },
+         {
+          "Id": "753220477"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "81759402",
+      "Name": "Play_Switch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Switch",
+      "GUID": "{E4EE031B-5C4C-427C-81A3-FD8FB2632C00}",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "234317664"
+       },
+       {
+        "Id": "783473555"
+       },
+       {
+        "Id": "992350466"
+       }
+      ]
+     },
+     {
+      "Id": "3186214750",
+      "Name": "Play_Vinyl",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Vinyl",
+      "GUID": "{87CED1EC-6CA8-4B1F-A01B-5D801AE9C60E}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "364260200"
+       }
+      ]
+     },
+     {
+      "Id": "242051745",
+      "Name": "Stop_Grow",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Grow",
+      "GUID": "{9A314116-B61A-4E40-98AF-B8BBD0942377}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3044745898",
+      "Name": "Music_Size",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Music_Size",
+      "GUID": "{2D03B35E-16C3-4523-ACD3-849C545C8CB0}",
+      "Switches": [
+       {
+        "Id": "647611021",
+        "Name": "Big",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Size\\Big",
+        "GUID": "{22AF3F2C-C4BC-4068-AD1E-81D8AECEEB41}"
+       },
+       {
+        "Id": "1182670505",
+        "Name": "Mid",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Size\\Mid",
+        "GUID": "{E607F3B0-E5EC-4561-B5C7-BA5E7260222A}"
+       },
+       {
+        "Id": "1846755610",
+        "Name": "Small",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Music_Size\\Small",
+        "GUID": "{774B06F2-24DC-40F8-932F-F0283C869DD7}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A6E41DD2-3BEB-B5B1-D9A8-7719ABC1CD08}"
+ }
+}
