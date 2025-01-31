@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class AudioManager : MonoBehaviour
     
     void Start()
     {
+        AkSoundEngine.SetRTPCValue("Volume", 100);
         StartMusic();
         AkSoundEngine.PostEvent("Play_Vinyl", gameObject);
     }
@@ -79,5 +81,10 @@ public class AudioManager : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Home", gameObject);
     }
 
+    public void SetRTPCFromSlider(Slider slider)
+    {
+        float rtpcValue = Mathf.Lerp(0f, 100f, slider.value); // Convert 0-1 to 0-100
+        AkSoundEngine.SetRTPCValue("Volume", rtpcValue);
+    }
     
 }

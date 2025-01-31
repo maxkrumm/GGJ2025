@@ -7,9 +7,11 @@ public class TitleManager : MonoBehaviour
     [SerializeField] private Image discImage;
     [SerializeField] private float speed = 1.0f;
 
+    public GameObject slider;
+
     void Start()
     {
-        
+
     }
     // Update is called once per frame
     void Update()
@@ -19,6 +21,7 @@ public class TitleManager : MonoBehaviour
 
     public void OnClicked()
     {
+        AkSoundEngine.PostEvent("Play_Play", gameObject);
         SceneManager.LoadSceneAsync("GameScene");
     }
 }

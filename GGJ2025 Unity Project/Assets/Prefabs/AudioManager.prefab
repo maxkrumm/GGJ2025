@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1867489135363242979}
   - component: {fileID: 7925079225196341394}
   - component: {fileID: 4626770912270813336}
+  - component: {fileID: 1358582680850855030}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -109,3 +110,28 @@ MonoBehaviour:
   OnBar:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1358582680850855030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072661043783137986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c464fdab33eea64aaffc4605be46aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d0411bb47577a09458298c7f189a94a8, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
