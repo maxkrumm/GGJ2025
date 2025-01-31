@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
@@ -8,35 +9,30 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Bubble _bubulePrefab;
     public GameObject meter;
-    private int limitcreate;
-    public int num = 7;
-    public int push_count;
-    public float timeleft;
-    public int bubblesize = 1;
-    const int Max = 15;
-    const int Min = 0;
-    bool changeRotate;
-    float rotate;
-    float angle;
-    Vector2 dir;
-    Bubble bubblecs = new Bubble();
-    public GameObject bottles;
+    public GameObject bottles; // Assign this in the inspector
 
-    private List<Bubble> chargedBubbles = new List<Bubble>();
+    private int num = 7;
+    private const int Max = 15;
+    private const int Min = 0;
+    private float previousRotation = 0f;
+    private float currentRotation = 0f;
+    public float duration = 0.1f; // Time for interpolation
+
+    private bool isInterpolating = false; // Lock input when rotating
+
     private CancellationTokenSource _cancellationTokenSource;
-    private bool _isRunning; // Prevent multiple Init() loops
-    private BubbleType _previousBubbleType; // Store last bubble type
+    private bool _isRunning;
+    private BubbleType _previousBubbleType;
 
     private void Start()
     {
-        _previousBubbleType = BubbleType.Rythm; // Initialize with default
+        _previousBubbleType = BubbleType.Rythm;
         StartInitLoop();
     }
 
     private void StartInitLoop()
     {
-        if (_isRunning) return; // Prevent multiple loops
-
+        if (_isRunning) return;
         _cancellationTokenSource = new CancellationTokenSource();
         _isRunning = true;
         Init(_cancellationTokenSource.Token).Forget();
@@ -48,37 +44,47 @@ public class Player : MonoBehaviour
         {
             while (!token.IsCancellationRequested)
             {
-                if (!this.enabled || !gameObject.activeSelf || token.IsCancellationRequested) break;
+                if (!this.enabled || !gameObject.activeSelf) break;
 
                 Bubble bubble = null;
                 BubbleType bubbleTypes = BubbleType.Rythm;
 
-                if (Input.mouseScrollDelta.y > 0) num--;
-                else if (Input.mouseScrollDelta.y < 0) num++;
+                // Only allow num to increase when NOT interpolating
+                if (!isInterpolating)
+                {
+                    if (Input.mouseScrollDelta.y > 0) num--;
+                    else if (Input.mouseScrollDelta.y < 0) num++;
+                }
 
                 num = Mathf.Clamp(num, Min, Max);
 
-                if (num >= 0) 
+                if (num >= 0)
                 {
                     bubbleTypes = BubbleType.Amb;
-                    bottles.transform.rotation = Quaternion.Euler(0, 0, -40);
+                    currentRotation = -30f;
                 }
-                if (num >= 5) 
+                if (num >= 5)
                 {
                     bubbleTypes = BubbleType.Rythm;
-                    bottles.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    currentRotation = 0f;
                 }
-                if (num >= 10) 
+                if (num >= 10)
                 {
                     bubbleTypes = BubbleType.Arp;
-                    bottles.transform.rotation = Quaternion.Euler(0, 0, 40);
+                    currentRotation = 30f;
                 }
 
-                // ✅ Only trigger Play_Switch when the bubble type changes
+                // Only trigger rotation change when the target rotation is different
+                if (!Mathf.Approximately(previousRotation, currentRotation))
+                {
+                    StartCoroutine(InterpolateToTarget(currentRotation, duration));
+                }
+
+                // Only trigger Play_Switch when the bubble type changes
                 if (bubbleTypes != _previousBubbleType)
                 {
                     AkSoundEngine.PostEvent("Play_Switch", gameObject);
-                    _previousBubbleType = bubbleTypes; // Update previous state
+                    _previousBubbleType = bubbleTypes;
                 }
 
                 if (!Input.GetKeyDown(KeyCode.Space))
@@ -98,12 +104,12 @@ public class Player : MonoBehaviour
                 {
                     timer += Time.deltaTime;
 
-                    if (timer >= 2) 
+                    if (timer >= 2)
                     {
                         bubble.SetScale(3);
                         break;
                     }
-                    else if (timer >= 1) 
+                    else if (timer >= 1)
                     {
                         bubble.SetScale(2);
                     }
@@ -113,20 +119,50 @@ public class Player : MonoBehaviour
 
                 var angle = Random.Range(0, 360) % 90;
                 bubble._speed = 5.0f;
-                dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+                Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
                 bubble.Shoot(dir);
             }
         }
         finally
         {
-            _isRunning = false; // Reset flag when exiting the loop
+            _isRunning = false;
         }
+    }
+
+    IEnumerator InterpolateToTarget(float newTarget, float time)
+    {
+        float startValue = previousRotation;
+        float elapsedTime = 0f;
+        isInterpolating = true; // Prevent num from increasing
+
+        while (elapsedTime < time)
+        {
+            elapsedTime += Time.deltaTime;
+            previousRotation = Mathf.Lerp(startValue, newTarget, elapsedTime / time);
+            
+            // Apply the interpolated rotation to the bottles object
+            if (bottles != null)
+            {
+                bottles.transform.rotation = Quaternion.Euler(0, 0, previousRotation);
+            }
+
+            yield return null;
+        }
+
+        // Ensure final rotation is exactly correct
+        previousRotation = newTarget;
+        if (bottles != null)
+        {
+            bottles.transform.rotation = Quaternion.Euler(0, 0, previousRotation);
+        }
+
+        isInterpolating = false; // Allow num to increase again
     }
 
     private void OnDisable()
     {
         _cancellationTokenSource?.Cancel();
         _cancellationTokenSource?.Dispose();
-        _isRunning = false; // Allow Init() to restart if needed
+        _isRunning = false;
     }
 }

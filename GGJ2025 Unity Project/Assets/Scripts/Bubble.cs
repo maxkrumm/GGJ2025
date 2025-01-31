@@ -31,6 +31,8 @@ public class Bubble : MonoBehaviour
     public int level = 1;
     public int size = 1;
 
+    public bool isScaling = true;
+
     /// <summary>
     /// 
     /// </summary>
@@ -44,19 +46,13 @@ public class Bubble : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// �V���{���ǂ������d�Ȃ��Ă��邩
-    /// </summary>
     public bool IsOverlap => _overlapBubble != null;
     public void OnDestroy()
     {
         BackGroundManager.Instance.Remove(this);
     }
-    /// <summary>
-    /// ����������
-    /// </summary>
-    /// <param name="type">�V���{���ʎ��</param>
-    /// <param name="size">�V���{���ʂ̃T�C�Y3�i�K</param>
+
+
     public void Initialize(BubbleType type)
     {
         SetScale(1);
@@ -79,6 +75,8 @@ public class Bubble : MonoBehaviour
 
     public void SetScale(int size)
     {
+        isScaling = true;
+
         this.size = size;
 
         // Apply a smaller difference between sizes
@@ -104,6 +102,7 @@ public class Bubble : MonoBehaviour
 
         Debug.Log("BUBBLE: " + Type + "  Size " + size + "  Level " + level);
 
+        isScaling = false;
     }
 
     // Update is called once per frame
@@ -118,58 +117,55 @@ public class Bubble : MonoBehaviour
         _rigidbody.linearVelocity = Dir * _speed;
     }
 
-    /// <summary>
-    /// Focus����Ă���
-    /// </summary>
     public void OnFocus(ref bool isFocus)
     {
 
     }
 
-    /// <summary>
-    /// �o�u���j�󃁃\�b�h
-    /// </summary>
     public void BreakBubble()
     {
-        AkSoundEngine.PostEvent("Play_Pop", gameObject);
-        _animator.SetTrigger("Break");
-        Destroy(gameObject, 0.5f);
+        if(!isScaling)
+        {
+            AkSoundEngine.PostEvent("Play_Pop", gameObject);
+            _animator.SetTrigger("Break");
+            Destroy(gameObject, 0.5f);
+        }
     }
+
+
     [SerializeField] private Bubble prefab;
-    /// <summary>
-    /// �V���{���ǂ���������
-    /// </summary>
+
     public Bubble BlendBubbles()
     {
-        //_animator.SetTrigger("Break");
+        if(!_overlapBubble.isScaling)
+        {           
+            var bubule = Instantiate(prefab);
+            bubule.level = Mathf.Clamp(level + 1, 1, 3);
+            bubule.transform.position = transform.position;
+            bubule.Initialize(Type);
+            bubule.SetScale(size);
+            bubule.Shoot(Dir, true);
 
-        var bubule = Instantiate(prefab);
-        // _audioSource.PlayOneShot(_blendSE);
-        bubule.level = Mathf.Clamp(level + 1, 1, 3);
-        bubule.transform.position = transform.position;
-        bubule.Initialize(Type);
-        bubule.SetScale(size);
-        bubule.Shoot(Dir, true);
+            Destroy(this.gameObject, 0.1f);
+            Destroy(_overlapBubble.gameObject, 0.1f);
 
-        Destroy(this.gameObject, 0.1f);
-        Destroy(_overlapBubble.gameObject, 0.1f);
-
-        return bubule;
-
+            return bubule;
+        }
+        else
+        return null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.TryGetComponent<Bubble>(out var bubble)) return;
 
-        if (_overlapBubble != null) return; // ���ɕʂ̂Əd�Ȃ��Ă���ꍇ�A�����͕s�v�̂���
+        if (_overlapBubble != null) return;
 
         if (bubble.Type != Type || bubble.level != level || bubble.size != size) return;
 
         _overlapBubble = bubble;
 
-        // �d�����̓N���b�N���₷���悤��������������
-            _speed = _overlapedSpeed;
+        _speed = _overlapedSpeed;
         
     }
 

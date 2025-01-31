@@ -14,7 +14,8 @@ public class PlayerBubbleClicker : MonoBehaviour
 
             
             var bubble = hit.collider.GetComponent<Bubble>();
-            if (bubble.IsOverlap)
+            
+            if (bubble.IsOverlap && !bubble.isScaling)
                 bubble.BlendBubbles();
             else
                 bubble.BreakBubble();  
