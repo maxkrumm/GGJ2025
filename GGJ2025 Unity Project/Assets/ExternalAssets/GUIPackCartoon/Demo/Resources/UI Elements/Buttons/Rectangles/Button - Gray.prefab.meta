@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c671905a4b7204f56b8520734a1c335a
+labels:
+- Text
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48850
+  packageName: Cartoon GUI Pack
+  packageVersion: 2.0.4
+  assetPath: Assets/ExternalAssets/GUIPackCartoon/Demo/Resources/UI Elements/Buttons/Rectangles/Button
+    - Gray.prefab
+  uploadId: 671655
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
