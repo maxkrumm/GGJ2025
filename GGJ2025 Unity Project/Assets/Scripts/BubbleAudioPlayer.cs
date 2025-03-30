@@ -25,13 +25,13 @@ public class BubbleAudioPlayer : MonoBehaviour
         else if (bubble.typeInt == 2)
         AkSoundEngine.SetSwitch("Music_Group", "Arp", gameObject);
 
-        if (bubble.size == 1)
+        if (bubble.Size == 1)
         AkSoundEngine.SetSwitch("Music_Size", "Small", gameObject);
 
-        else if (bubble.size == 2)
+        else if (bubble.Size == 2)
         AkSoundEngine.SetSwitch("Music_Size", "Mid", gameObject);
 
-        else if (bubble.size == 3)
+        else if (bubble.Size == 3)
         AkSoundEngine.SetSwitch("Music_Size", "Big", gameObject);
 
         if (bubble.level == 1)
@@ -69,7 +69,7 @@ public class BubbleAudioPlayer : MonoBehaviour
         {
             // Post the Wwise event
             bubblePlayEvent.Post(gameObject);
-            Debug.Log("SOUND: " + bubble.Type + "  Size " + bubble.size.ToString() + "  Level " + bubble.level.ToString());
+            Debug.Log("SOUND: " + bubble.Type + "  Size " + bubble.Size.ToString() + "  Level " + bubble.level.ToString());
             // Reset the flag
             triggerEventOnNextBeat = false;
         }

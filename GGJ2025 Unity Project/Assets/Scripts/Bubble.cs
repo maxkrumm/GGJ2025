@@ -29,7 +29,7 @@ public class Bubble : MonoBehaviour
     public Vector2 Dir { get; set; }
 
     public int level = 1;
-    public int size = 1;
+    private int _size = 1;
 
     public bool isScaling = true;
 
@@ -47,6 +47,10 @@ public class Bubble : MonoBehaviour
     }
 
     public bool IsOverlap => _overlapBubble != null;
+    public bool IsLevelMax => level == 3;
+
+    public int Size => _size;
+
     public void OnDestroy()
     {
         BackGroundManager.Instance.Remove(this);
@@ -64,10 +68,9 @@ public class Bubble : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         var setting = _settings.FirstOrDefault(x => x.type == type);
-        _spriteRenderer.color = setting.colors[level - 1];
 
-        if(!IsOverlap)
-        AkSoundEngine.PostEvent("Play_Grow", gameObject);  
+        if (!IsOverlap)
+            AkSoundEngine.PostEvent("Play_Grow", gameObject);
 
         BackGroundManager.Instance.Add(this);
 
@@ -77,7 +80,7 @@ public class Bubble : MonoBehaviour
     {
         isScaling = true;
 
-        this.size = size;
+        this._size = size;
 
         // Apply a smaller difference between sizes
         float adjustedSize = 1 + (size - 1) * 0.35f; // Scale size differences (1 -> 1, 2 -> 1.5, 3 -> 2)
@@ -95,12 +98,12 @@ public class Bubble : MonoBehaviour
         bubbleAudioPlayer.PlaySound();
         AkSoundEngine.PostEvent("Stop_Grow", gameObject);
 
-        if(isBlend)
-        AkSoundEngine.PostEvent("Play_Join", gameObject);
+        if (isBlend)
+            AkSoundEngine.PostEvent("Play_Join", gameObject);
         else
-        AkSoundEngine.PostEvent("Play_Spawn", gameObject);
+            AkSoundEngine.PostEvent("Play_Spawn", gameObject);
 
-        Debug.Log("BUBBLE: " + Type + "  Size " + size + "  Level " + level);
+        Debug.Log("BUBBLE: " + Type + "  Size " + _size + "  Level " + level);
 
         isScaling = false;
     }
@@ -124,7 +127,7 @@ public class Bubble : MonoBehaviour
 
     public void BreakBubble()
     {
-        if(!isScaling)
+        if (!isScaling)
         {
             AkSoundEngine.PostEvent("Play_Pop", gameObject);
             _animator.SetTrigger("Break");
@@ -137,13 +140,14 @@ public class Bubble : MonoBehaviour
 
     public Bubble BlendBubbles()
     {
-        if(!_overlapBubble.isScaling)
-        {           
-            var bubule = Instantiate(prefab);
+        if (!_overlapBubble.isScaling)
+        {
+            var setting = _settings.FirstOrDefault(x => x.type == Type);
+            var bubule = Instantiate(setting.levelprefab[level]);
             bubule.level = Mathf.Clamp(level + 1, 1, 3);
             bubule.transform.position = transform.position;
             bubule.Initialize(Type);
-            bubule.SetScale(size);
+            bubule.SetScale(_size);
             bubule.Shoot(Dir, true);
 
             Destroy(this.gameObject, 0.1f);
@@ -152,7 +156,7 @@ public class Bubble : MonoBehaviour
             return bubule;
         }
         else
-        return null;
+            return null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -161,12 +165,12 @@ public class Bubble : MonoBehaviour
 
         if (_overlapBubble != null) return;
 
-        if (bubble.Type != Type || bubble.level != level || bubble.size != size) return;
+        if (bubble.Type != Type || bubble.level != level || bubble._size != _size) return;
 
         _overlapBubble = bubble;
 
         _speed = _overlapedSpeed;
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

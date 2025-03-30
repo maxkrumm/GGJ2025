@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using UniRx;
+using System;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private BubbleSetting[] _settings;
     [SerializeField] private Transform _spawnPoint;
-    [SerializeField] private Bubble _bubulePrefab;
-    public GameObject meter;
     public GameObject bottles; // Assign this in the inspector
 
     private int num = 7;
@@ -19,13 +20,14 @@ public class Player : MonoBehaviour
     public float duration = 0.1f; // Time for interpolation
 
     private bool isInterpolating = false; // Lock input when rotating
-
+    private Subject<Bubble> _onBubbleCreated = new Subject<Bubble>();
     private CancellationTokenSource _cancellationTokenSource;
     private bool _isRunning;
     private BubbleType _previousBubbleType;
 
     private void Start()
     {
+        _onBubbleCreated.AddTo(this);
         _previousBubbleType = BubbleType.Rythm;
         StartInitLoop();
     }
@@ -94,7 +96,7 @@ public class Player : MonoBehaviour
                 }
 
                 float timer = 0f;
-                bubble = Instantiate(_bubulePrefab, _spawnPoint.position, Quaternion.identity);
+                bubble = Instantiate(_settings[(int)bubbleTypes].levelprefab[0], _spawnPoint.position, Quaternion.identity);
                 bubble.Initialize(bubbleTypes);
 
                 int size = 1;
@@ -117,16 +119,28 @@ public class Player : MonoBehaviour
                     await UniTask.Yield(token);
                 }
 
-                var angle = Random.Range(0, 360) % 90;
+                var angle = UnityEngine.Random.Range(0, 360) % 90;
                 bubble._speed = 5.0f;
                 Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
                 bubble.Shoot(dir);
+
+                _onBubbleCreated.OnNext(bubble);
             }
         }
         finally
         {
             _isRunning = false;
         }
+    }
+
+    public IObservable<Bubble> OnBubbleCreatedAsObservable()
+    {
+        return _onBubbleCreated.AsObservable();
+    }
+
+    public async UniTask<Bubble> WaitForBubbleCreationAsync()
+    {
+        return await OnBubbleCreatedAsObservable().First();
     }
 
     IEnumerator InterpolateToTarget(float newTarget, float time)
@@ -139,7 +153,7 @@ public class Player : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             previousRotation = Mathf.Lerp(startValue, newTarget, elapsedTime / time);
-            
+
             // Apply the interpolated rotation to the bottles object
             if (bottles != null)
             {

@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Amb
   m_EditorClassIdentifier: 
   type: 1
+  levelprefab:
+  - {fileID: 1552366607857402601, guid: be9255f6d17681b41a2d228981ad7809, type: 3}
+  - {fileID: 1552366607857402601, guid: 82655f929eb6c1d4eb2101982d60e88f, type: 3}
+  - {fileID: 1552366607857402601, guid: bbc5241d1925b8942872d4e304504adc, type: 3}
   colors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 0.4584905, b: 0.4584905, a: 1}

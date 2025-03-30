@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Rythm
   m_EditorClassIdentifier: 
   type: 0
+  levelprefab:
+  - {fileID: 1552366607857402601, guid: 5aa7e4f66deecc3409246cfa47f8782a, type: 3}
+  - {fileID: 1552366607857402601, guid: 35829c5afc808f84092704f2a0f04674, type: 3}
+  - {fileID: 1552366607857402601, guid: 02d3e89ab78fcc646886d60c9b87e92d, type: 3}
   colors:
   - {r: 0.71819323, g: 1, b: 0.390566, a: 1}
   - {r: 0, g: 0.7514851, b: 1, a: 1}

@@ -1030,7 +1030,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3179561347456159073, guid: b793cdec9f0046d4391c3a62334f7180, type: 3}
+  m_Sprite: {fileID: -6484854548922872040, guid: d0a92e8f8376cd442a730c6bfe5a972a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1763,7 +1763,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8538090553041344634, guid: f6f3f173091510f4eb51aa0a54d05b4a, type: 3}
+  m_Sprite: {fileID: -6484854548922872040, guid: d0a92e8f8376cd442a730c6bfe5a972a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2094,7 +2094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf689b0f31c99b4d862444ec74218c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 10
+  count: 300
   bubbleClicker: {fileID: 1468252837}
   player: {fileID: 1468252841}
 --- !u!114 &1468252837
@@ -2140,12 +2140,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Sprites:
+  - {fileID: -6484854548922872040, guid: d0a92e8f8376cd442a730c6bfe5a972a, type: 3}
   - {fileID: -8538090553041344634, guid: f6f3f173091510f4eb51aa0a54d05b4a, type: 3}
   - {fileID: -3179561347456159073, guid: b793cdec9f0046d4391c3a62334f7180, type: 3}
-  - {fileID: -6484854548922872040, guid: d0a92e8f8376cd442a730c6bfe5a972a, type: 3}
   renderers:
-  - {fileID: 559724048}
   - {fileID: 1243093834}
+  - {fileID: 559724048}
   duration: 1
 --- !u!114 &1468252841
 MonoBehaviour:
@@ -2159,9 +2159,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7fe603e34c51f42a7905b4c5830d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _settings:
+  - {fileID: 11400000, guid: 4dcb7704145be7741995a0ac3d942735, type: 2}
+  - {fileID: 11400000, guid: b705284073dd18348ae427ab1d16f5d8, type: 2}
+  - {fileID: 11400000, guid: e017bed561a7cc0468d141bf485506f4, type: 2}
   _spawnPoint: {fileID: 359631981}
-  _bubulePrefab: {fileID: -2984697493844781445, guid: f0fee52a2e4fbd348836a722b3efed93, type: 3}
-  meter: {fileID: 1104028098}
   bottles: {fileID: 592032823}
   duration: 0.1
 --- !u!1 &1558201093

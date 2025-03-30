@@ -12,14 +12,14 @@ public class PlayerBubbleClicker : MonoBehaviour
 
             if (hit.collider == null) return;
 
-            
+
             var bubble = hit.collider.GetComponent<Bubble>();
-            
-            if (bubble.IsOverlap && !bubble.isScaling)
+
+            if (bubble.IsOverlap && !bubble.IsLevelMax && !bubble.isScaling)
                 bubble.BlendBubbles();
             else
-                bubble.BreakBubble();  
-            
+                bubble.BreakBubble();
+
         }
     }
 }

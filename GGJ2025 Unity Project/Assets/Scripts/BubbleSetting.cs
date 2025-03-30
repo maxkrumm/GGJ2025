@@ -5,5 +5,5 @@ public class BubbleSetting : ScriptableObject
 {
     public BubbleType type;
 
-    public Color[] colors;
+    public Bubble[] levelprefab;
 }
