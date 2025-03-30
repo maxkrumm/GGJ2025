@@ -16,9 +16,10 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private PopupOpener _bubbuleShootPopup;
     private TextDialog _dialog;
-    [SerializeField] private SceneTransitionController _transitionController;
+    private SceneTransitionController _transitionController;
     private void Start()
     {
+        _transitionController = FindFirstObjectByType<SceneTransitionController>();
         _dialog = Instantiate(_dialogPrefab);
         TutorialFlowAsync(destroyCancellationToken).Forget();
     }
