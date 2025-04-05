@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks.Linq;
 using Ricimi;
 using System.Threading;
 using System.Threading.Tasks;
+using UniRx;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -55,6 +56,7 @@ public class TutorialManager : MonoBehaviour
 
     public void OnClickTransitionButton(string name)
     {
+        new Subject<int>().Select().Subscribe(x =>)
         _transitionController.TransitionAsync(name, 1, default);
     }
 

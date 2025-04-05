@@ -53,7 +53,7 @@ public class Bubble : MonoBehaviour
 
     public void OnDestroy()
     {
-        BackGroundManager.Instance.Remove(this);
+        GameManager.Instance.RemoveBubble(this);
     }
 
 
@@ -72,8 +72,7 @@ public class Bubble : MonoBehaviour
         if (!IsOverlap)
             AkSoundEngine.PostEvent("Play_Grow", gameObject);
 
-        BackGroundManager.Instance.Add(this);
-
+        GameManager.Instance.AddBubble(this);
     }
 
     public void SetScale(int size)
