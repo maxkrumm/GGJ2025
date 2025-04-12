@@ -1,3 +1,4 @@
+using Assets.Scripts.Common;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
 using Ricimi;
@@ -25,6 +26,7 @@ public class TutorialManager : MonoBehaviour
         TutorialFlowAsync(destroyCancellationToken).Forget();
     }
 
+    // チュートリアルの一連の手続き
     private async UniTaskVoid TutorialFlowAsync(CancellationToken cancellationToken)
     {
         _dialog.enabled = true;
@@ -36,15 +38,23 @@ public class TutorialManager : MonoBehaviour
         //await UniTask.WaitUntil(() => Input.GetMouseButtonDown(0), cancellationToken: cancellationToken);
         _dialog.enabled = false;
 
-        var popup = _bubbuleShootPopup.OpenPopup();
+        var message = MessageBox.ShowText();
+        message.Open();
+        //var popup = _bubbuleShootPopup.OpenPopup();
+
+        // 入力有効化
         _player.enabled = true;
         await _player.WaitForBubbleCreationAsync();
-        popup.Close();
+        message.Close();
+        //popup.Close();
 
-        popup = _bubbuleShootPopup.OpenPopup();
+        //popup = _bubbuleShootPopup.OpenPopup();
         //popup.
         await _player.WaitForBubbleCreationAsync();
-        popup.Close();
+        //popup.Close();
+        message.Text = "Holdでシャボン玉成長";
+        message.Open();
+
 
         await _player.WaitForBubbleCreationAsync()
             .ToUniTaskAsyncEnumerable()
@@ -56,8 +66,7 @@ public class TutorialManager : MonoBehaviour
 
     public void OnClickTransitionButton(string name)
     {
-        new Subject<int>().Select().Subscribe(x =>)
-        _transitionController.TransitionAsync(name, 1, default);
+        _transitionController.TransitionAsync(name, 1, default).Forget();
     }
 
 }

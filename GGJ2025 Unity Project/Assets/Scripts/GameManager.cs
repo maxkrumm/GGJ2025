@@ -17,11 +17,11 @@ public class GameManager
         }
     }
 
-    private ObservableCollection<Bubble> _currentBubule;
+    private ReactiveCollection<Bubble> _currentBubule;
 
     private GameManager()
     {
-        _currentBubule = new ObservableCollection<Bubble>();
+        _currentBubule = new ReactiveCollection<Bubble>();
     }
 
     public void AddBubble(Bubble bubble)
@@ -34,5 +34,5 @@ public class GameManager
         _currentBubule.Remove(bubble);
     }
 
-    public ObservableCollection<Bubble> CurrentBubbleCollection() => _currentBubule;
+    public ReactiveCollection<Bubble> CurrentBubbleCollection() => _currentBubule;
 }

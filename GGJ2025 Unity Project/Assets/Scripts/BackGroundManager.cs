@@ -1,12 +1,11 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using System.Linq;
-using System.Drawing;
-using Color = UnityEngine.Color;
 using UniRx;
+using UnityEngine;
+using Color = UnityEngine.Color;
 
+// îwåiÇBubbleÇÃêîÇ…ÇÊÇ¡ÇƒïœâªÇ≥ÇπÇ‹Ç∑
 public class BackGroundManager : MonoBehaviour
 {
     [SerializeField] private Sprite[] m_Sprites;
@@ -28,35 +27,21 @@ public class BackGroundManager : MonoBehaviour
         color.a = 0;
         renderers[1].color = color;
 
-        GameManager.Instance.CurrentBubbleCollection().CollectionChanged += (in NotifyCollectionChangedEventArgs<int> args) =>
-        {
-            switch (args.Action)
-            {
-                case NotifyCollectionChangedAction.Add:
-                    Debug.Log($"Add:[{args.NewStartingIndex}] = {args.NewItem}");
-                    break;
-                case NotifyCollectionChangedAction.Move:
-                    Debug.Log($"Move:[{args.OldStartingIndex}] => [{args.NewStartingIndex}]");
-                    break;
-                case NotifyCollectionChangedAction.Remove:
-                    Debug.Log($"Remove:[{args.OldStartingIndex}] = {args.OldItem}");
-                    break;
-                case NotifyCollectionChangedAction.Replace:
-                    Debug.Log($"Replace:[{args.OldStartingIndex}] = ({args.OldItem} => {args.NewItem})");
-                    break;
-                case NotifyCollectionChangedAction.Reset:
-                    Debug.Log("Reset");
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        };
+        GameManager
+            .Instance
+            .CurrentBubbleCollection()
+            .ObserveAdd()
+            .Subscribe((CollectionAddEvent<Bubble> r) => Add(r.Value))
+            .AddTo(this);
+
+        GameManager
+           .Instance
+           .CurrentBubbleCollection()
+           .ObserveRemove()
+           .Subscribe((CollectionRemoveEvent<Bubble> r) => Remove(r.Value))
+           .AddTo(this);
     }
 
-    private void BackGroundManager_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-    {
-        throw new System.NotImplementedException();
-    }
 
     public void Remove(Bubble bubble)
     {
