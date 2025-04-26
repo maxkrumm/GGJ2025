@@ -512,6 +512,7 @@ MonoBehaviour:
   _dialogPrefab: {fileID: 789788819}
   _player: {fileID: 1468252841}
   _bubbuleShootPopup: {fileID: 228470896}
+  _bottleAnimator: {fileID: 592032825}
 --- !u!114 &228470896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,7 +1255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &585233601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,6 +1332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 592032824}
+  - component: {fileID: 592032825}
   m_Layer: 0
   m_Name: Bottles
   m_TagString: Untagged
@@ -1356,6 +1358,28 @@ Transform:
   - {fileID: 411462911}
   m_Father: {fileID: 2113159008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &592032825
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592032823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41e8b3777bccece4eb268d1fa514bed0, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &706188372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,7 +1527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &736733551
 Transform:
   m_ObjectHideFlags: 0
@@ -2139,7 +2163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1407583556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3210,7 +3234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2020676852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3463,7 +3487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2113159008
 Transform:
   m_ObjectHideFlags: 0

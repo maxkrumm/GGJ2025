@@ -8,13 +8,17 @@ using System;
 
 public class Player : MonoBehaviour
 {
+    private const int Max = 2;
+    private const int Min = 0;
+    private BubbleType[] bubbleTypes = new BubbleType[3] { BubbleType.Arp, BubbleType.Rythm, BubbleType.Amb };
+    private float[] bubbleTypeRots = new float[3] { 30, 0, -30 };
+
+
     [SerializeField] private BubbleSetting[] _settings;
     [SerializeField] private Transform _spawnPoint;
     public GameObject bottles; // Assign this in the inspector
 
-    private int num = 7;
-    private const int Max = 15;
-    private const int Min = 0;
+    private int currentBubbleID = 1;
     private float previousRotation = 0f;
     private float currentRotation = 0f;
     public float duration = 0.1f; // Time for interpolation
@@ -25,8 +29,13 @@ public class Player : MonoBehaviour
     private bool _isRunning;
     private BubbleType _previousBubbleType;
 
+
+    public IReadOnlyReactiveProperty<BubbleType> CurrentBubbleType => _bubbleRx;
+    private ReactiveProperty<BubbleType> _bubbleRx = new ReactiveProperty<BubbleType>(BubbleType.Rythm);
+
     private void Start()
     {
+        _bubbleRx.AddTo(this);
         _onBubbleCreated.AddTo(this);
         _previousBubbleType = BubbleType.Rythm;
         StartInitLoop();
@@ -40,6 +49,27 @@ public class Player : MonoBehaviour
         Init(_cancellationTokenSource.Token).Forget();
     }
 
+    private void Update()
+    {
+        // Only allow num to increase when NOT interpolating
+
+        if (isInterpolating) return;
+
+        if (Input.mouseScrollDelta.y > 0) currentBubbleID++;
+        else if (Input.mouseScrollDelta.y < 0) currentBubbleID--;
+
+        currentBubbleID = Mathf.Clamp(currentBubbleID, Min, Max);
+
+        _bubbleRx.Value = bubbleTypes[currentBubbleID];
+        currentRotation = bubbleTypeRots[currentBubbleID];
+
+        // Only trigger rotation change when the target rotation is different
+        if (!Mathf.Approximately(previousRotation, currentRotation))
+        {
+            StartCoroutine(InterpolateToTarget(currentRotation, duration));
+        }
+    }
+
     private async UniTask Init(CancellationToken token)
     {
         try
@@ -49,44 +79,14 @@ public class Player : MonoBehaviour
                 if (!this.enabled || !gameObject.activeSelf) break;
 
                 Bubble bubble = null;
-                BubbleType bubbleTypes = BubbleType.Rythm;
 
-                // Only allow num to increase when NOT interpolating
-                if (!isInterpolating)
-                {
-                    if (Input.mouseScrollDelta.y > 0) num--;
-                    else if (Input.mouseScrollDelta.y < 0) num++;
-                }
 
-                num = Mathf.Clamp(num, Min, Max);
-
-                if (num >= 0)
-                {
-                    bubbleTypes = BubbleType.Amb;
-                    currentRotation = -30f;
-                }
-                if (num >= 5)
-                {
-                    bubbleTypes = BubbleType.Rythm;
-                    currentRotation = 0f;
-                }
-                if (num >= 10)
-                {
-                    bubbleTypes = BubbleType.Arp;
-                    currentRotation = 30f;
-                }
-
-                // Only trigger rotation change when the target rotation is different
-                if (!Mathf.Approximately(previousRotation, currentRotation))
-                {
-                    StartCoroutine(InterpolateToTarget(currentRotation, duration));
-                }
 
                 // Only trigger Play_Switch when the bubble type changes
-                if (bubbleTypes != _previousBubbleType)
+                if (_bubbleRx.Value != _previousBubbleType)
                 {
                     AkSoundEngine.PostEvent("Play_Switch", gameObject);
-                    _previousBubbleType = bubbleTypes;
+                    _previousBubbleType = _bubbleRx.Value;
                 }
 
                 if (!Input.GetKeyDown(KeyCode.Space))
@@ -96,8 +96,8 @@ public class Player : MonoBehaviour
                 }
 
                 float timer = 0f;
-                bubble = Instantiate(_settings[(int)bubbleTypes].levelprefab[0], _spawnPoint.position, Quaternion.identity);
-                bubble.Initialize(bubbleTypes);
+                bubble = Instantiate(_settings[(int)_bubbleRx.Value].levelprefab[0], _spawnPoint.position, Quaternion.identity);
+                bubble.Initialize(_bubbleRx.Value);
 
                 int size = 1;
                 bubble.SetScale(size);
