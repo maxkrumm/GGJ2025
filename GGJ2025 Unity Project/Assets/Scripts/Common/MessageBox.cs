@@ -67,8 +67,9 @@ namespace Assets.Scripts.Common
         {
             _canvasGroup.DOFade(0f, duration)
                 .SetEase(Ease.InOutQuad);
-            //.OnComplete(() => ); // フェードアウト後に削除
+            //.OnComplete(() => ObjectPoolInstance.Release(this)); // フェードアウト後に削除
         }
+
         public static MessageBox ShowText()
         {
             return ObjectPoolInstance.Rental();
@@ -80,5 +81,6 @@ namespace Assets.Scripts.Common
             ((RectTransform)msgBox.transform).anchoredPosition = pos;
             return msgBox;
         }
+
     }
 }

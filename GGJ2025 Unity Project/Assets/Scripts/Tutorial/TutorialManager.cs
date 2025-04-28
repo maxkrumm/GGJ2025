@@ -1,27 +1,26 @@
 using Assets.Scripts.Common;
 using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.Linq;
 using Ricimi;
 using System;
 using System.Threading;
-using System.Threading.Tasks;
 using UniRx;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 public class TutorialManager : MonoBehaviour
 {
-    [SerializeField] private TextDialog _dialogPrefab;
-    //[SerializeField]
-    //private
+    [SerializeField] private TextDialog _dialogPrefab; // テキストダイアログボックス:削除予定
+
+    [SerializeField] private BubbleGenerator _bubbleGenerator;
+    [SerializeField] private PlayerBubbleClicker _playerBubbleClicker;
+
     [SerializeField] private Player _player;
     [SerializeField] private PopupOpener _bubbuleShootPopup;
+    [SerializeField] private Animator _bottleAnimator;
+
     private TextDialog _dialog;
     private SceneTransitionController _transitionController;
 
-    [SerializeField] private Animator _bottleAnimator;
     private void Start()
     {
         _transitionController = FindFirstObjectByType<SceneTransitionController>();
@@ -35,12 +34,13 @@ public class TutorialManager : MonoBehaviour
         _dialog.enabled = true;
         _dialog.Text = "このゲームはしゃぼん玉を作ったり合成させたりしてインタラクティブな音楽を作るゲームです。\n音を出せる環境でプレイすることを強く推奨します。";
         await UniTask.WaitUntil(() => Input.GetMouseButtonDown(0), cancellationToken: cancellationToken);
-
+        _dialog.enabled = false;
+        var bubble = await シャボンの生成指示(cancellationToken);
+        await シャボンの破壊指示(bubble, cancellationToken);
         await ホイール指示();
         // moveDialog
         //_dialog.Text = "スペースボタンでしゃぼん玉を発射できます。";
         //await UniTask.WaitUntil(() => Input.GetMouseButtonDown(0), cancellationToken: cancellationToken);
-        _dialog.enabled = false;
 
         //var message = MessageBox.ShowText();
         //message.Open();
@@ -68,13 +68,45 @@ public class TutorialManager : MonoBehaviour
         //popup.Close();
     }
 
+    private async UniTask<Bubble> シャボンの生成指示(CancellationToken cancellationToken)
+    {
+        var message = MessageBox.ShowText();
+        message.Text = "スペースボタンでしゃぼん玉を発射";
+        message.Open();
+
+        await UniTask.WaitUntil(() => Input.GetKeyDown(KeyCode.Space), cancellationToken: cancellationToken);
+        message.Close();
+
+        var bubble = _bubbleGenerator.Generate(BubbleType.Amb);
+        bubble._speed = 5.0f;
+        Vector2 dir = new Vector2(Mathf.Cos(45), Mathf.Sin(45));
+        bubble.Shoot(dir);
+        return bubble;
+    }
+
+    private async UniTask シャボンの破壊指示(Bubble bubble, CancellationToken cancellationToken)
+    {
+        await UniTask.Delay(TimeSpan.FromSeconds(1), cancellationToken: cancellationToken);
+        bubble._speed = 0;
+
+        var message = MessageBox.ShowText(RectTransformUtility.WorldToScreenPoint(
+             Camera.main,
+             bubble.transform.position + Vector3.up));
+        message.Text = "クリックで破壊";
+        message.Open();
+
+        await bubble.OnDestroyedAsync;
+        message.Close();
+    }
+
+
     private async UniTask ホイール指示()
     {
         var message = MessageBox.ShowText();
         message.Open();
         message.Text = "ホイールでシャボン液変更";
         _bottleAnimator.Play("Tutorial_Bottle_RotationAnim");
-        await UniTask.DelayFrame(200);
+        await UniTask.DelayFrame(400); // 上記の回転Animationが完了するまで待機
         _player.enabled = true;
         var cts = new CancellationTokenSource();
 

@@ -1,5 +1,5 @@
+using Cysharp.Threading.Tasks;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum BubbleType { Rythm, Amb, Arp }
@@ -33,6 +33,9 @@ public class Bubble : MonoBehaviour
 
     public bool isScaling = true;
 
+    private UniTaskCompletionSource _onDestroyedTcs = new UniTaskCompletionSource();
+    public UniTask OnDestroyedAsync => _onDestroyedTcs.Task;
+
     /// <summary>
     /// 
     /// </summary>
@@ -53,6 +56,7 @@ public class Bubble : MonoBehaviour
 
     public void OnDestroy()
     {
+        _onDestroyedTcs.TrySetResult();
         GameManager.Instance.RemoveBubble(this);
     }
 

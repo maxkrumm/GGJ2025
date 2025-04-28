@@ -13,9 +13,7 @@ public class Player : MonoBehaviour
     private BubbleType[] bubbleTypes = new BubbleType[3] { BubbleType.Arp, BubbleType.Rythm, BubbleType.Amb };
     private float[] bubbleTypeRots = new float[3] { 30, 0, -30 };
 
-
-    [SerializeField] private BubbleSetting[] _settings;
-    [SerializeField] private Transform _spawnPoint;
+    [SerializeField] private BubbleGenerator _bubbleGenerator;
     public GameObject bottles; // Assign this in the inspector
 
     private int currentBubbleID = 1;
@@ -96,11 +94,8 @@ public class Player : MonoBehaviour
                 }
 
                 float timer = 0f;
-                bubble = Instantiate(_settings[(int)_bubbleRx.Value].levelprefab[0], _spawnPoint.position, Quaternion.identity);
-                bubble.Initialize(_bubbleRx.Value);
+                bubble = _bubbleGenerator.Generate(_bubbleRx.Value);
 
-                int size = 1;
-                bubble.SetScale(size);
 
                 while (Input.GetKey(KeyCode.Space) && !token.IsCancellationRequested)
                 {
